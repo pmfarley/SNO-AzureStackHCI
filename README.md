@@ -11,9 +11,18 @@ Single-Node OpenShift requires the following minimum host resources:
 
 ## **SINGLE NODE AZURE STACK HCI PREREQUISITES:**
 Single-Node Azure Stack HCI requires the following minimum host resources: 
+https://learn.microsoft.com/en-us/azure-stack/hci/concepts/system-requirements
+
+I installed Azure Stack HCI on a Cisco C220M4 server, with the following
 - CPU: 
-- Memory: 
+  - Intel(R) Xeon(R) CPU E5-2680 v3 @ 2.50GHz (12 core)
+- Memory: 384 GB
 - Storage: 
+  - (1) 120GB SATA SSD (boot)
+  - (3) 400GB SAS SSD (storage pool)
+- Network: 
+  - Onboard dual-port 1GigE I350 LOM
+  - Mellanox ConnectX-4 LX dual-port 1/10/25/40/50 Gigabit Ethernet adapter 
 
 You can learn more about the single-node Azure Stack HCI clusters on Microsoft Docs: 
 https://learn.microsoft.com/en-us/azure-stack/hci/concepts/single-server-clusters
@@ -21,15 +30,47 @@ https://learn.microsoft.com/en-us/azure-stack/hci/deploy/single-server
 
 ## **STEP 1. INSTALL THE AZURE STACK HCI OS ON YOUR SERVER.**
 
+Perform these steps to install the Azure Stack HCI Operating System:
+https://learn.microsoft.com/en-us/azure-stack/hci/deploy/operating-system
+
 ## **STEP 2. CONFIGURE THE SERVER UTILIZING THE SERVER CONFIGURATION TOOL (SCONFIG).**
 
-## **STEP 3. INSTALL THE REQUIRED ROLES AND FEATURES.**
+![image](https://user-images.githubusercontent.com/48925593/192650160-a3e00d93-46bb-419b-ab04-ef22f1306440.png)
 
-## **STEP 4. USE POWERSHELL TO CREATE A CLUSTER.**
+**a. Select 8 to set the network addresses and DNS settings.**
+**b. Select 2 & 3 to set the computername and join an Active Directory Domain.**
+**c. Select 6 to install the latest updates.**
+
+## **STEP 3. INSTALL THE REQUIRED ROLES AND FEATURES WITH POWERSHELL.**
+
+   ```bash
+   Install-WindowsFeature -Name "BitLocker", "Data-Center-Bridging", "Failover-Clustering", "FS-FileServer", "FS-Data-Deduplication", "Hyper-V", "Hyper-V-PowerShell", "RSAT-AD-Powershell", "RSAT-Clustering-PowerShell", "NetworkATC", "Storage-Replica" -IncludeAllSubFeature -IncludeManagementTools
+   ```
+
+## **STEP 4. CREATE AN AZURE STACK HCI CLUSTER WITH POWERSHELL.**
+
+   ```bash
+   New-Cluster -Name <cluster-name> -Node <node-name> -NOSTORAGE -StaticAddress <ipaddress>
+   ```
+   
+   ```bash
+   New-Cluster -Name AZSHCI-cluster -Node AZSHCI -NOSTORAGE -StaticAddress 192.168.2.183
+   ```
+   
 
 ## **STEP 5. USE POWERSHELL OR WINDOWS ADMIN CENTER TO REGISTER THE CLUSTER.**
 
+   ```bash
+   Install-Module -Name Az.StackHCI
+   
+   Register-AzStackHCI  -SubscriptionId "<subscription_ID>" -ResourceGroupName <resourcegroup>
+   ```
+
 ## **STEP 6. CREATE VOLUMES WITH POWERSHELL.**
+
+   ```bash
+   New-Volume -FriendlyName "S2D on AZSHCI-cluster" -Size 1TB -ProvisioningType Thin
+   ```
 
 ## **STEP 7. GENERATE DISCOVERY ISO FROM THE ASSISTED INSTALLER:**
 
@@ -68,18 +109,31 @@ This will be used in a later step from the SNO instance.
 **e. Click 'Close' to return to the previous screen.**
 
 
-## **STEP 8. CREATE A VIRTUAL MACHINE FOR SINGLE NODE OPENSHIFT**
+## **STEP 8. FROM WINDOWS ADMIN CENTER, CREATE A VIRTUAL MACHINE FOR SINGLE NODE OPENSHIFT**
 
-**a. Select 'Create VM'.**
+**a. From Virtual Machines, select "Add, +New".**
 
-Allocate the CPU, memory and sisk resources.  
+**b. Enter the Name, the number of virtual processors, memory, network.**
 
-Go to “Security”, and Uncheck “Enable Secure Boot”. This will allow you to boot from the Discovery ISO image, without it having a signed hash.  
+**c. Under the Storage category, select "+ Add" and create a new disk of at least 120GB.**
+
+**d. Under the Operating System category, select "Install an operating system from an image file (.iso)".  
+Click on the browse button to select the Discovery ISO file**
+
+NOTE: You will have to transfer the Discovery ISO file to the Azure Stack HCI server.
+
+**e. When complete, select "Create”.**
+
+**f. Edit the settings for the VM. Select Settings, then under the Security category, uncheck “Enable Secure Boot”.**
+This will allow you to boot from the Discovery ISO image, without it having a signed hash.  
 
 For more information see: https://learn.microsoft.com/en-us/windows-server/virtualization/hyper-v/learn-more/generation-2-virtual-machine-security-settings-for-hyper-v
 
 ## **STEP 7. BOOT THE VIRTUAL MACHINE FROM THE DISCOVERY ISO:**
 
+**a. From Virtual Machines, select the VM and then "Power, Start".**
+
+**b. To watch it boot, select the VM and then "Connect, Connect".**
 
 
 ## **STEP 8. RETURN TO THE ASSISTED INSTALLER TO FINISH THE INSTALLATION:**
