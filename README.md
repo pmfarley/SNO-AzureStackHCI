@@ -35,10 +35,12 @@ https://learn.microsoft.com/en-us/azure-stack/hci/deploy/operating-system
 
 ## **STEP 2. CONFIGURE THE SERVER UTILIZING THE SERVER CONFIGURATION TOOL (SCONFIG).**
 
-![image](https://user-images.githubusercontent.com/48925593/192650160-a3e00d93-46bb-419b-ab04-ef22f1306440.png)
+![image](https://user-images.githubusercontent.com/48925593/192652884-f81af13c-c10b-4438-9903-5e4bc8746b94.png)
 
 **a. Select 8 to set the network addresses and DNS settings.**
+
 **b. Select 2 & 3 to set the computername and join an Active Directory Domain.**
+
 **c. Select 6 to install the latest updates.**
 
 ## **STEP 3. INSTALL THE REQUIRED ROLES AND FEATURES WITH POWERSHELL.**
@@ -82,7 +84,7 @@ You will be prompted for your Red Hat ID and password to login.
  ![image](https://user-images.githubusercontent.com/48925593/140575947-b4f8e666-637c-451f-b797-d30feff712d3.png)
 
 
-**b. Enter the cluster name, and the base domain; then select 'Install single node OpenShift (SNO)' and 'OpenShift 4.9.4', and click 'Next'.**
+**b. Enter the cluster name, and the base domain; then select 'Install single node OpenShift (SNO)' and 'OpenShift 4.11.4', and click 'Next'.**
 
  ![image](https://user-images.githubusercontent.com/48925593/143304033-01bd05b8-71ad-4a9d-94e5-e9ee4b38e729.png)
 
@@ -98,9 +100,9 @@ You will be prompted for your Red Hat ID and password to login.
  ![image](https://user-images.githubusercontent.com/48925593/140576887-3764d5fc-b271-4b7e-806a-f79ecde64be8.png)
 
 
-**e. Click on the 'Copy to clipboard' icon to the right of the 'Command to download the ISO'.**
+**e. Click on the 'Download Discovery ISO' button.**
 
-This will be used in a later step from the SNO instance.
+This file will be used in a later step from the SNO Virtual Machine.
 
  ![image](https://user-images.githubusercontent.com/48925593/143304940-fe1e3bbc-31c5-4127-8a09-f6885be762e0.png)
 
