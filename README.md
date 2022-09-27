@@ -1,7 +1,8 @@
 # SNO-AzureStackHCI
 Installing Single Node OpenShift (SNO) on a Single Node Azure Stack HCI using the OpenShift Assisted-Installer.
 
-REQUIREMENTS FOR INSTALLING ON A SINGLE NODE:  https://docs.openshift.com/container-platform/4.9/installing/installing_sno/install-sno-preparing-to-install-sno.html
+REQUIREMENTS FOR INSTALLING ON A SINGLE NODE:  
+ - https://docs.openshift.com/container-platform/4.9/installing/installing_sno/install-sno-preparing-to-install-sno.html
 
 ## **SINGLE NODE OPENSHIFT PREREQUISITES:**
 Single-Node OpenShift requires the following minimum host resources: 
@@ -11,7 +12,7 @@ Single-Node OpenShift requires the following minimum host resources:
 
 ## **SINGLE NODE AZURE STACK HCI PREREQUISITES:**
 Single-Node Azure Stack HCI requires the following minimum host resources: 
-https://learn.microsoft.com/en-us/azure-stack/hci/concepts/system-requirements
+ - https://learn.microsoft.com/en-us/azure-stack/hci/concepts/system-requirements
 
 I installed Azure Stack HCI on a Cisco C220M4 server, with the following
 - CPU: 
@@ -25,13 +26,13 @@ I installed Azure Stack HCI on a Cisco C220M4 server, with the following
   - Mellanox ConnectX-4 LX dual-port 1/10/25/40/50 Gigabit Ethernet adapter 
 
 You can learn more about the single-node Azure Stack HCI clusters on Microsoft Docs: 
-https://learn.microsoft.com/en-us/azure-stack/hci/concepts/single-server-clusters
-https://learn.microsoft.com/en-us/azure-stack/hci/deploy/single-server
+ - https://learn.microsoft.com/en-us/azure-stack/hci/concepts/single-server-clusters
+ - https://learn.microsoft.com/en-us/azure-stack/hci/deploy/single-server
 
 ## **STEP 1. INSTALL THE AZURE STACK HCI OS ON YOUR SERVER.**
 
 Perform these steps to install the Azure Stack HCI Operating System:
-https://learn.microsoft.com/en-us/azure-stack/hci/deploy/operating-system
+ - https://learn.microsoft.com/en-us/azure-stack/hci/deploy/operating-system
 
 ## **STEP 2. CONFIGURE THE SERVER UTILIZING THE SERVER CONFIGURATION TOOL (SCONFIG).**
 
@@ -76,7 +77,8 @@ https://learn.microsoft.com/en-us/azure-stack/hci/deploy/operating-system
 
 ## **STEP 7. GENERATE DISCOVERY ISO FROM THE ASSISTED INSTALLER:**
 
-Open the OpenShift Assisted Installer website: https://console.redhat.com/openshift/assisted-installer/clusters/. 
+Open the OpenShift Assisted Installer website: 
+ - https://console.redhat.com/openshift/assisted-installer/clusters/ 
 You will be prompted for your Red Hat ID and password to login.
 
 **a. Select 'Create cluster'.**
@@ -128,8 +130,8 @@ NOTE: You will have to transfer the Discovery ISO file to the Azure Stack HCI se
 
 **f. Edit the settings for the VM. Select Settings, then under the Security category, uncheck “Enable Secure Boot”.**
 This will allow you to boot from the Discovery ISO image, without it having a signed hash.  
-
-For more information see: https://learn.microsoft.com/en-us/windows-server/virtualization/hyper-v/learn-more/generation-2-virtual-machine-security-settings-for-hyper-v
+For more information see: 
+ - https://learn.microsoft.com/en-us/windows-server/virtualization/hyper-v/learn-more/generation-2-virtual-machine-security-settings-for-hyper-v
 
 ## **STEP 7. BOOT THE VIRTUAL MACHINE FROM THE DISCOVERY ISO:**
 
