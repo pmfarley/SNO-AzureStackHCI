@@ -31,7 +31,7 @@ You can learn more about the single-node Azure Stack HCI clusters on Microsoft D
 
 ## **STEP 1. INSTALL THE AZURE STACK HCI OS ON YOUR SERVER.**
 
-Perform these steps to install the Azure Stack HCI Operating System:
+Perform these steps to download and install the Azure Stack HCI Operating System:
  - https://learn.microsoft.com/en-us/azure-stack/hci/deploy/operating-system
 
 ## **STEP 2. CONFIGURE THE SERVER UTILIZING THE SERVER CONFIGURATION TOOL (SCONFIG).**
