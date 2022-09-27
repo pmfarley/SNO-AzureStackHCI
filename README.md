@@ -5,7 +5,7 @@ REQUIREMENTS FOR INSTALLING ON A SINGLE NODE:
  - https://docs.openshift.com/container-platform/4.9/installing/installing_sno/install-sno-preparing-to-install-sno.html
 
 ## **SINGLE NODE OPENSHIFT PREREQUISITES:**
-Single-Node OpenShift requires the following minimum host resources: 
+Single-Node OpenShift requires the following minimum resources: 
 - CPU: 8 CPU cores
 - Memory: 32GB of RAM
 - Storage: 120 GB 
@@ -14,7 +14,7 @@ Single-Node OpenShift requires the following minimum host resources:
 Single-Node Azure Stack HCI requires the following minimum host resources: 
  - https://learn.microsoft.com/en-us/azure-stack/hci/concepts/system-requirements
 
-I installed Azure Stack HCI on a Cisco C220M4 server, with the following
+I installed Single-Node Azure Stack HCI on a Cisco C220M4 server, with the following
 - CPU: 
   - Intel(R) Xeon(R) CPU E5-2680 v3 @ 2.50GHz (12 core)
 - Memory: 384 GB
@@ -52,6 +52,7 @@ Perform these steps to install the Azure Stack HCI Operating System:
 
 ## **STEP 4. CREATE AN AZURE STACK HCI CLUSTER WITH POWERSHELL.**
 
+Run this command from PowerShell:
    ```bash
    New-Cluster -Name <cluster-name> -Node <node-name> -NOSTORAGE -StaticAddress <ipaddress>
    ```
@@ -63,6 +64,7 @@ Perform these steps to install the Azure Stack HCI Operating System:
 
 ## **STEP 5. REGISTER THE CLUSTER WITH POWERSHELL [OR WINDOWS ADMIN CENTER].**
 
+Run this command from PowerShell:
    ```bash
    Install-Module -Name Az.StackHCI
    
@@ -71,6 +73,7 @@ Perform these steps to install the Azure Stack HCI Operating System:
 
 ## **STEP 6. CREATE VOLUMES WITH POWERSHELL.**
 
+Run this command from PowerShell:
    ```bash
    New-Volume -FriendlyName "S2D on AZSHCI-cluster" -Size 1TB -ProvisioningType Thin
    ```
