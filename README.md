@@ -61,7 +61,7 @@ Perform these steps to install the Azure Stack HCI Operating System:
    ```
    
 
-## **STEP 5. USE POWERSHELL OR WINDOWS ADMIN CENTER TO REGISTER THE CLUSTER.**
+## **STEP 5. REGISTER THE CLUSTER WITH POWERSHELL [OR WINDOWS ADMIN CENTER].**
 
    ```bash
    Install-Module -Name Az.StackHCI
