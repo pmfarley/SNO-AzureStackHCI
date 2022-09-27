@@ -38,6 +38,8 @@ Perform these steps to download and install the Azure Stack HCI Operating System
 
 ![image](https://user-images.githubusercontent.com/48925593/192652884-f81af13c-c10b-4438-9903-5e4bc8746b94.png)
 
+Configure the server by performing these steps in SConfig:
+
 **a. Select 8 to set the network addresses and DNS settings.**
 
 **b. Select 2 & 3 to set the computername and join an Active Directory Domain.**
