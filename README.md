@@ -155,8 +155,6 @@ Return to the OpenShift Assisted Installer.
 ![image](https://user-images.githubusercontent.com/48925593/143313096-6ed9e605-50ee-43e1-8e05-9fd260c09d93.png)
 
 
-![image](https://user-images.githubusercontent.com/48925593/143312805-d65410b7-0263-48bb-bbe1-56e885c99276.png)
-
 
 **c. Review the configuration, and select _Install Cluster_.**
 
