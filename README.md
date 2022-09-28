@@ -5,9 +5,9 @@ REQUIREMENTS FOR INSTALLING ON A SINGLE NODE:
  - https://docs.openshift.com/container-platform/4.9/installing/installing_sno/install-sno-preparing-to-install-sno.html
 
 ## **SINGLE NODE OPENSHIFT PREREQUISITES:**
-Single-Node OpenShift requires the following minimum resources: 
-- CPU: 8 CPU cores
-- Memory: 32GB of RAM
+Single-Node OpenShift has the following minimum resource requirements: 
+- CPU: 8 vCPU cores
+- Memory: 16 GB of RAM
 - Storage: 120 GB 
 
 ## **SINGLE NODE AZURE STACK HCI PREREQUISITES:**
@@ -88,7 +88,7 @@ Run this command from PowerShell:
 
 **b. Select 'Create cluster'.**
 
- ![image](https://user-images.githubusercontent.com/48925593/192826429-4cd0c823-cc65-49e3-b54f-c50af4eb26d0.png)
+ ![image](https://user-images.githubusercontent.com/48925593/192834456-7c792bf6-270e-43bf-890a-0b08800c135c.png)
 
 
 
@@ -119,26 +119,48 @@ Save this file for use in a later step, when creating the Virtual Machine for SN
  ![image](https://user-images.githubusercontent.com/48925593/192833572-c3976b7e-da62-430c-ad46-6ab635504e0e.png)
 
 
-
 **e. Click 'Close' to return to the previous screen.**
 
 
 ## **STEP 8. FROM WINDOWS ADMIN CENTER, CREATE A VIRTUAL MACHINE FOR SINGLE NODE OPENSHIFT**
 
-**a. From Virtual Machines, select "Add, +New".**
+To use Windows Admin Center, which is a web-based management interface used to manage Azure Stack HCI, you can install it on a management PC, a Windows Server, or use it from the Azure Portal. For more information, refer to:
 
-**b. Enter the Name, the number of virtual processors, memory, network.**
+ - https://learn.microsoft.com/en-us/azure-stack/hci/get-started
+ - https://learn.microsoft.com/en-us/windows-server/manage/windows-admin-center/azure/manage-hci-clusters
 
-**c. Under the Storage category, select "+ Add" and create a new disk of at least 120GB.**
 
-**d. Under the Operating System category, select "Install an operating system from an image file (.iso)".  
-Click on the browse button to select the Discovery ISO file**
+**a. From Windows Admin Center, navigate to 'Virtual Machines', select "Add, +New".**
 
-NOTE: You will have to transfer the Discovery ISO file to the Azure Stack HCI server.
+ ![image](https://user-images.githubusercontent.com/48925593/192840528-9b103985-8105-4465-8650-95c3bd1b5ea1.png)
 
-**e. When complete, select "Create”.**
 
-**f. Edit the settings for the VM. Select Settings, then under the Security category, uncheck “Enable Secure Boot”.**
+**b. Enter the Virtual Machine Name, and the virtual processors, memory, and network settings.**
+
+The minimum resource requirements for Single-Node OpenShift are **CPU**: 8 vCPUs, **Memory**: 16 GB, **Storage**: 120 GB 
+
+ ![image](https://user-images.githubusercontent.com/48925593/192843243-63c3820d-18da-4ef3-816d-56ab2cffd82a.png)
+
+
+**c. Continue, scrolling down to the Storage category, select "+ Add" and continuing below.**
+
+ ![image](https://user-images.githubusercontent.com/48925593/192844003-c0fa927b-762b-41b5-82cb-011eddb5b058.png)
+
+**d. Continue, in the Storage categoty, create an empty virtual hard disk of at least 120GB.**
+
+**e. Continue, in the Operating System category, select "Install an operating system from an image file (.iso)", and click on the 'Browse' button to select the Discovery ISO file.**
+
+**NOTE:** You will have to transfer the Discovery ISO file from where you downloaded it earlier, to the Azure Stack HCI server.
+
+ ![image](https://user-images.githubusercontent.com/48925593/192845733-7089e538-1a15-464d-a32e-0ebef9ec9cca.png)
+
+
+**f. When complete, select "Create”.**
+
+ ![image](https://user-images.githubusercontent.com/48925593/192847552-a68eaf2d-6a02-4f4b-8b94-c4ceb544a4fe.png)
+
+
+**g. Edit the settings for the VM. Select Settings, then under the Security category, uncheck “Enable Secure Boot”.**
 This will allow you to boot from the Discovery ISO image, without it having a signed hash.  
 For more information see: 
  - https://learn.microsoft.com/en-us/windows-server/virtualization/hyper-v/learn-more/generation-2-virtual-machine-security-settings-for-hyper-v
