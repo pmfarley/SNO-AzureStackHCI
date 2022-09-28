@@ -221,5 +221,5 @@ Return to the OpenShift Assisted Installer.
 Upon completion, you'll see the summary of the installation, and you'll be able to _download the kubeconfig file_, 
 _copy the kubeadmin password_, and _launch the OpenShift Web console_.
 
- ![image](https://user-images.githubusercontent.com/48925593/192873418-732f6eaf-67c9-4776-96a3-d6fb367c64db.png)
+ ![image](https://user-images.githubusercontent.com/48925593/192879833-50de1600-9bd6-4446-9d6b-bfe62953d754.png)
 
