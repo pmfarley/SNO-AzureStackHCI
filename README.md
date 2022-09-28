@@ -1,16 +1,15 @@
 # SNO-AzureStackHCI
 Installing Single Node OpenShift (SNO) on a Single Node Azure Stack HCI using the OpenShift Assisted-Installer.
 
-REQUIREMENTS FOR INSTALLING ON A SINGLE NODE:  
- - https://docs.openshift.com/container-platform/4.9/installing/installing_sno/install-sno-preparing-to-install-sno.html
 
-## **SINGLE NODE OPENSHIFT PREREQUISITES:**
+## **SINGLE NODE OPENSHIFT REQUIREMENTS:**
 Single-Node OpenShift has the following minimum resource requirements: 
-- CPU: 8 vCPU cores
-- Memory: 16 GB of RAM
-- Storage: 120 GB 
+ - https://docs.openshift.com/container-platform/4.9/installing/installing_sno/install-sno-preparing-to-install-sno.html
+ - CPU: 8 vCPU cores
+ - Memory: 16 GB of RAM
+ - Storage: 120 GB 
 
-## **SINGLE NODE AZURE STACK HCI PREREQUISITES:**
+## **SINGLE NODE AZURE STACK HCI REQUIREMENTS:**
 Single-Node Azure Stack HCI requires the following minimum host resources: 
  - https://learn.microsoft.com/en-us/azure-stack/hci/concepts/system-requirements
 
@@ -66,7 +65,7 @@ Run this command from PowerShell:
 
 ## **STEP 5. REGISTER THE CLUSTER WITH POWERSHELL [OR WINDOWS ADMIN CENTER].**
 
-Run this command from PowerShell:
+Run these `Install-Module` and `Register-AzStackHCI` commands from PowerShell:
    ```bash
    Install-Module -Name Az.StackHCI
    
@@ -194,7 +193,7 @@ Return to the OpenShift Assisted Installer.
  
   ![image](https://user-images.githubusercontent.com/48925593/192862082-54e1eee0-ec2e-4e61-acf6-728b74bd2a9f.png)
 
- **b. From the '_Networking_' menu, confirm the discovered/selected `machine network`, and click on '_Next_' to proceed.**
+ **b. From the '_Networking_' menu, confirm the discovered/selected 'machine network', and click on '_Next_' to proceed.**
 
 ![image](https://user-images.githubusercontent.com/48925593/192863902-ad33c29f-80c8-4ceb-925f-0f66d3bf5985.png)
 
