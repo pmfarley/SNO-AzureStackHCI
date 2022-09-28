@@ -82,36 +82,41 @@ Run this command from PowerShell:
 
 ## **STEP 7. GENERATE DISCOVERY ISO FROM THE ASSISTED INSTALLER:**
 
-Open the OpenShift Assisted Installer website: 
+**a. Open the OpenShift Assisted Installer website:** 
  - https://console.redhat.com/openshift/assisted-installer/clusters/ 
-You will be prompted for your Red Hat ID and password to login.
+ - You will be prompted for your Red Hat ID and password to login.
 
-**a. Select 'Create cluster'.**
+**b. Select 'Create cluster'.**
 
- ![image](https://user-images.githubusercontent.com/48925593/140575947-b4f8e666-637c-451f-b797-d30feff712d3.png)
-
-
-**b. Enter the cluster name, and the base domain; then select 'Install single node OpenShift (SNO)' and 'OpenShift 4.11.4', and click 'Next'.**
-
- ![image](https://user-images.githubusercontent.com/48925593/143304033-01bd05b8-71ad-4a9d-94e5-e9ee4b38e729.png)
+ ![image](https://user-images.githubusercontent.com/48925593/192826429-4cd0c823-cc65-49e3-b54f-c50af4eb26d0.png)
 
 
 
-**c. Select 'Generate Discovery ISO'.**
+**b. On the 'Cluster details' step, enter the cluster name, the base domain; then select 'OpenShift 4.11.5' and 'Install single node OpenShift (SNO)', and click 'Next'.**
 
- ![image](https://user-images.githubusercontent.com/48925593/143304631-df063601-d2a5-49d7-af05-db699fd9e01e.png)
+ ![image](https://user-images.githubusercontent.com/48925593/192830931-2ffbf143-bd24-4207-a454-b654e5c61e72.png)
 
 
-**d. Select 'Minimal Image File' and 'Generate Discovery ISO'.**
+**c. On the 'Operators' step, click 'Next'.**
 
- ![image](https://user-images.githubusercontent.com/48925593/140576887-3764d5fc-b271-4b7e-806a-f79ecde64be8.png)
+![image](https://user-images.githubusercontent.com/48925593/192830345-95deccd9-a662-4cd2-ae5a-1c7174d1d50b.png)
+
+
+**d. On the 'Host discovery' step, select 'Add host'.**
+
+![image](https://user-images.githubusercontent.com/48925593/192832043-bfb9dd47-4003-4a61-b87c-3525d0200edc.png)
+
+
+**e. Select 'Minimal Image File' and 'Generate Discovery ISO'.**
+
+ ![image](https://user-images.githubusercontent.com/48925593/192832846-14bc0b90-9294-4e7d-adc1-b6745b4752e0.png)
 
 
 **e. Click on the 'Download Discovery ISO' button.**
 
-This file will be used in a later step from the SNO Virtual Machine.
+Save this file for use in a later step, when creating the Virtual Machine for SNO.
 
- ![image](https://user-images.githubusercontent.com/48925593/143304940-fe1e3bbc-31c5-4127-8a09-f6885be762e0.png)
+ ![image](https://user-images.githubusercontent.com/48925593/192833572-c3976b7e-da62-430c-ad46-6ab635504e0e.png)
 
 
 
