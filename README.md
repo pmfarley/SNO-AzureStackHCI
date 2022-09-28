@@ -139,12 +139,12 @@ To use Windows Admin Center, which is a web-based management interface used to m
 
 The minimum resource requirements for Single-Node OpenShift are **CPU**: 8 vCPUs, **Memory**: 16 GB, **Storage**: 120 GB 
 
- ![image](https://user-images.githubusercontent.com/48925593/192843243-63c3820d-18da-4ef3-816d-56ab2cffd82a.png)
+ ![image](https://user-images.githubusercontent.com/48925593/192877497-2a7ba0f1-06da-461c-b1b9-93557bf6f212.png)
 
 
-**c. Continue, scrolling down to the Storage category, select "_+ Add_" and continuing below.**
+**c. Continue, scrolling down to the Storage category, select '_+ Add_' and continuing below.**
 
- ![image](https://user-images.githubusercontent.com/48925593/192844003-c0fa927b-762b-41b5-82cb-011eddb5b058.png)
+ ![image](https://user-images.githubusercontent.com/48925593/192877175-16796a24-5726-4582-af33-f62ab6d07537.png)
 
 **d. Continue, in the '_Storage_' category, create an empty virtual hard disk of at least 120GB.**
 
@@ -152,7 +152,7 @@ The minimum resource requirements for Single-Node OpenShift are **CPU**: 8 vCPUs
 
 **NOTE:** You will have to transfer the Discovery ISO file from where you downloaded it earlier, to the Azure Stack HCI server.
 
- ![image](https://user-images.githubusercontent.com/48925593/192845733-7089e538-1a15-464d-a32e-0ebef9ec9cca.png)
+ ![image](https://user-images.githubusercontent.com/48925593/192877014-00efc4f4-dc20-4a14-b1b5-8df64fa2906e.png)
 
 
 **f. When complete, select '_Create_'.**
