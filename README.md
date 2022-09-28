@@ -206,7 +206,7 @@ Return to the OpenShift Assisted Installer.
 
 **d. Monitor the installation progress.**
 
- ![image](https://user-images.githubusercontent.com/48925593/192866738-c0114fed-0c86-443a-85a9-4b8c62c09da8.png)
+ ![image](https://user-images.githubusercontent.com/48925593/192870231-ed154ce4-e90a-4acb-b21b-48896274144b.png)
 
  ![image](https://user-images.githubusercontent.com/48925593/192866418-1ea22b75-6862-47c5-bdc8-504119a2b38a.png)
  
