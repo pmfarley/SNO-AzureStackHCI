@@ -199,7 +199,7 @@ Return to the OpenShift Assisted Installer.
 ![image](https://user-images.githubusercontent.com/48925593/192863902-ad33c29f-80c8-4ceb-925f-0f66d3bf5985.png)
 
 
-**c. Review the configuration, and select _Install Cluster_.**
+**c. Review the configuration, and click on '_Install Cluster_'.**
 
  ![image](https://user-images.githubusercontent.com/48925593/192865038-fff12a98-2c64-4f8f-a26a-e8d9f9fabb55.png)
 
@@ -214,11 +214,13 @@ Return to the OpenShift Assisted Installer.
 
  ![image](https://user-images.githubusercontent.com/48925593/192869246-12d4d4e4-9434-489d-8e8c-e31eb01bd6cf.png)
 
+ ![image](https://user-images.githubusercontent.com/48925593/192872090-5b63d1ff-f1ff-44ac-8ffa-8e038dc8c8d6.png)
+
 
 **e. Installation Complete.**
 
-Upon completion, you'll see the summary of the installation, and you'll be able to download the kubeconfig file, 
-and retreive the kubeadmin password.
+Upon completion, you'll see the summary of the installation, and you'll be able to _download the kubeconfig file_, 
+_copy the kubeadmin password_, and _launch the OpenShift Web console_.
 
- ![image](https://user-images.githubusercontent.com/48925593/143317424-36b69123-21d1-4213-83ac-26cb980f1e4f.png)
+ ![image](https://user-images.githubusercontent.com/48925593/192873418-732f6eaf-67c9-4776-96a3-d6fb367c64db.png)
 
