@@ -30,12 +30,15 @@ You can learn more about the single-node Azure Stack HCI clusters on Microsoft D
 
 ## **STEP 1. INSTALL THE AZURE STACK HCI OS ON YOUR SERVER.**
 
+ ![image](https://user-images.githubusercontent.com/48925593/192880327-f4fcc44c-dc0d-4c01-b6eb-df27718b2183.png)
+
+
 Perform these steps to download and install the Azure Stack HCI Operating System:
  - https://learn.microsoft.com/en-us/azure-stack/hci/deploy/operating-system
 
 ## **STEP 2. CONFIGURE THE SERVER UTILIZING THE SERVER CONFIGURATION TOOL (SCONFIG).**
 
-![image](https://user-images.githubusercontent.com/48925593/192652884-f81af13c-c10b-4438-9903-5e4bc8746b94.png)
+![image](https://user-images.githubusercontent.com/48925593/192880152-8f8d247b-825e-438c-b622-35413f521440.png)
 
 Configure the server by performing these steps in SConfig:
 
@@ -47,17 +50,20 @@ Configure the server by performing these steps in SConfig:
 
 ## **STEP 3. INSTALL THE REQUIRED ROLES AND FEATURES WITH POWERSHELL.**
 
+Run this `Install-WindowsFeature` command to install the required roles and features from PowerShell:
+
    ```bash
    Install-WindowsFeature -Name "BitLocker", "Data-Center-Bridging", "Failover-Clustering", "FS-FileServer", "FS-Data-Deduplication", "Hyper-V", "Hyper-V-PowerShell", "RSAT-AD-Powershell", "RSAT-Clustering-PowerShell", "NetworkATC", "Storage-Replica" -IncludeAllSubFeature -IncludeManagementTools
    ```
 
 ## **STEP 4. CREATE AN AZURE STACK HCI CLUSTER WITH POWERSHELL.**
 
-Run this command from PowerShell:
+Run this `New-Cluster` command to create an Azure Stack HCI cluster from PowerShell:
    ```bash
    New-Cluster -Name <cluster-name> -Node <node-name> -NOSTORAGE -StaticAddress <ipaddress>
    ```
-   
+
+Here's the command that I ran from PowerShell:   
    ```bash
    New-Cluster -Name AZSHCI-cluster -Node AZSHCI -NOSTORAGE -StaticAddress 192.168.2.183
    ```
@@ -74,7 +80,7 @@ Run these `Install-Module` and `Register-AzStackHCI` commands from PowerShell:
 
 ## **STEP 6. CREATE VOLUMES WITH POWERSHELL.**
 
-Run this command from PowerShell:
+Run this `New-Volume` command to create a volume from PowerShell:
    ```bash
    New-Volume -FriendlyName "S2D on AZSHCI-cluster" -Size 1TB -ProvisioningType Thin
    ```
@@ -83,7 +89,7 @@ Run this command from PowerShell:
 
 **a. Open the OpenShift Assisted Installer website:** 
  - https://console.redhat.com/openshift/assisted-installer/clusters/ 
- - You will be prompted for your Red Hat ID and password to login.
+ - You will be prompted for your `Red Hat ID` and `password` to login.
 
 **b. Select '_Create cluster_'.**
 
@@ -91,7 +97,7 @@ Run this command from PowerShell:
 
 
 
-**b. From the '_Cluster details_' step, enter the cluster name, the base domain; then select 'OpenShift 4.11.5' and 'Install single node OpenShift (SNO)', and click '_Next_'.**
+**b. From the '_Cluster details_' step, enter the cluster name, the base domain; then select '_OpenShift 4.11.5_' and '_Install single node OpenShift (SNO)_', and click '_Next_'.**
 
  ![image](https://user-images.githubusercontent.com/48925593/192830931-2ffbf143-bd24-4207-a454-b654e5c61e72.png)
 
@@ -123,7 +129,7 @@ Save this file for use in a later step, when creating the Virtual Machine for SN
 
 ## **STEP 8. FROM WINDOWS ADMIN CENTER, CREATE A VIRTUAL MACHINE FOR SINGLE NODE OPENSHIFT**
 
-To use Windows Admin Center, which is a web-based management interface used to manage Azure Stack HCI, you can install it on a management PC, a Windows Server, or use it from the Azure Portal. For more information, refer to:
+To use **Windows Admin Center**, which is a web-based management interface used to manage Azure Stack HCI, you can install it on a management PC, a Windows Server, or use it from the Azure Portal. For more information, refer to:
 
  - https://learn.microsoft.com/en-us/azure-stack/hci/get-started
  - https://learn.microsoft.com/en-us/windows-server/manage/windows-admin-center/azure/manage-hci-clusters
@@ -160,7 +166,7 @@ The minimum resource requirements for Single-Node OpenShift are **CPU**: 8 vCPUs
  ![image](https://user-images.githubusercontent.com/48925593/192847552-a68eaf2d-6a02-4f4b-8b94-c4ceb544a4fe.png)
 
 
-**g. Continue by editing the settings for the VM. Click on '_Settings_' (the gear icon), then under the Security category, uncheck '_Enable Secure Boot_'. Select '_Save Security Settings_', then click '_Close_'.**
+**g. Continue by editing the settings for the VM. Click on '_Settings_' (the gear icon), then under the _Security_ category, uncheck '_Enable Secure Boot_'. Select '_Save Security Settings_', then click '_Close_'.**
 
  ![image](https://user-images.githubusercontent.com/48925593/192849753-1f984931-1b11-4a58-a605-bc81477dbf67.png)
 
@@ -171,11 +177,11 @@ For more information see:
 
 ## **STEP 7. BOOT THE VIRTUAL MACHINE FROM THE DISCOVERY ISO:**
 
-**a. From Virtual Machines, select the VM and then '_Power_, _Start_'.**
+**a. From _Virtual Machines_, select the VM and then '_Power_, _Start_'.**
 
  ![image](https://user-images.githubusercontent.com/48925593/192850501-e5c64a10-8fb3-4b11-942e-d4da35f0b1f4.png)
 
-**b. To watch it boot, select the VM and then '_Connect_, _Connect_'.**
+**b. To connect to the VM console to watch it during boot, select the VM and then '_Connect_, _Connect_'.**
 
  ![image](https://user-images.githubusercontent.com/48925593/192855462-8d72d335-a40d-4722-bbc3-a99415e3fdbb.png)
 
