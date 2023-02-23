@@ -4,7 +4,7 @@ Installing Single Node OpenShift (SNO) on a Single Node Azure Stack HCI using th
 
 ## **SINGLE NODE OPENSHIFT REQUIREMENTS:**
 Single-Node OpenShift has the following minimum resource requirements: 
- - https://docs.openshift.com/container-platform/4.9/installing/installing_sno/install-sno-preparing-to-install-sno.html
+ - https://docs.openshift.com/container-platform/4.11/installing/installing_sno/install-sno-preparing-to-install-sno.html
  - CPU: 8 vCPU cores
  - Memory: 16 GB of RAM
  - Storage: 120 GB 
