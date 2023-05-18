@@ -1,6 +1,8 @@
 # Single Node OpenShift on Single Node Azure Stack HCI 
-Within this blog, I will provide the process for installing Single Node OpenShift (SNO) onto a Single Node Azure Stack HCI server using the OpenShift Assisted-Installer.
+Within this blog, I will provide the process for installing a Single Node Azure Stack HCI server, and using the OpenShift Assisted-Installer to install Single Node OpenShift (SNO) onto it.
+If installing Red Hat OpenShift onto an existing Azure Stack HCI environment, you could skip directly to STEP 7.
 
+The combination of Single Node OpenShift running on a Single Node Azure Stack HCI server provides a suitable platform for running edge workloads.  In addition, OpenShift running on Azure Stack HCI on-premises can be used along with OpenShift running in Microsoft Azure to provide a solution for hybrid cloud workloads.
 
 ## **SINGLE NODE OPENSHIFT REQUIREMENTS:**
 Single-Node OpenShift has the following [minimum resource requirements](https://docs.openshift.com/container-platform/4.11/installing/installing_sno/install-sno-preparing-to-install-sno.html#install-sno-requirements-for-installing-on-a-single-node_install-sno-preparing):
@@ -95,8 +97,7 @@ Run this `New-Volume` command to create a volume from PowerShell:
 
 ## **STEP 7. GENERATE DISCOVERY ISO FROM THE ASSISTED INSTALLER:**
 
-**a. Open the OpenShift Assisted Installer website:** 
- - https://console.redhat.com/openshift/assisted-installer/clusters/ 
+**a. Open the [OpenShift Assisted Installer from the Red Hat Hybrid Cloud Console](https://console.redhat.com/openshift/assisted-installer/clusters/):** 
  - You will be prompted for your `Red Hat ID` and `password` to login.
 
 **b. Select '_Create cluster_'.**
