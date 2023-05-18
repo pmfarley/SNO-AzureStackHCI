@@ -39,8 +39,8 @@ I installed Single-Node Azure Stack HCI onto a 1U rack server, with the followin
   - Mellanox ConnectX-4 LX dual-port 1/10/25/40/50 Gigabit Ethernet adapter 
 
 You can learn more about the single-node Azure Stack HCI clusters on Microsoft Docs: 
- - https://learn.microsoft.com/en-us/azure-stack/hci/concepts/single-server-clusters
- - https://learn.microsoft.com/en-us/azure-stack/hci/deploy/single-server
+ - [_Using Azure Stack HCI on a single server_](https://learn.microsoft.com/en-us/azure-stack/hci/concepts/single-server-clusters)
+ - [_Deploy Azure Stack HCI on a single server_](https://learn.microsoft.com/en-us/azure-stack/hci/deploy/single-server)
 
 <br></br>
 ## **STEP 1. INSTALL THE AZURE STACK HCI OS ON YOUR SERVER.**
@@ -229,5 +229,5 @@ _copy the kubeadmin password_, and _launch the OpenShift Web console_.
 
 <br></br>
 
-## **CONCLUSTION**
+## **CONCLUSION**
 
