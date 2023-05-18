@@ -1,6 +1,6 @@
 # Single Node OpenShift on Single Node Azure Stack HCI 
 Within this blog, I will provide the process for installing a Single Node Azure Stack HCI server, and using the OpenShift Assisted-Installer to install Single Node OpenShift (SNO) onto it.
-If installing Red Hat OpenShift onto an existing Azure Stack HCI environment, you could skip directly to STEP 7.
+If installing Red Hat OpenShift onto an existing Azure Stack HCI environment, you could skip directly to _STEP 7_.
 
 The combination of Single Node OpenShift running on a Single Node Azure Stack HCI server provides a suitable platform for running edge workloads.  In addition, OpenShift running on Azure Stack HCI on-premises can be used along with OpenShift running in Microsoft Azure to provide a solution for hybrid cloud workloads.
 
