@@ -1,17 +1,22 @@
 # Single Node OpenShift on Single Node Azure Stack HCI 
-Within this blog, I will provide the process for installing Single Node OpenShift (SNO) on a Single Node Azure Stack HCI server using the OpenShift Assisted-Installer.
+Within this blog, I will provide the process for installing Single Node OpenShift (SNO) onto a Single Node Azure Stack HCI server using the OpenShift Assisted-Installer.
 
 
 ## **SINGLE NODE OPENSHIFT REQUIREMENTS:**
-Single-Node OpenShift has the following minimum resource requirements: 
- - https://docs.openshift.com/container-platform/4.11/installing/installing_sno/install-sno-preparing-to-install-sno.html
+Single-Node OpenShift has the following [minimum resource requirements](https://docs.openshift.com/container-platform/4.11/installing/installing_sno/install-sno-preparing-to-install-sno.html#install-sno-requirements-for-installing-on-a-single-node_install-sno-preparing):
  - CPU: 8 vCPU cores
  - Memory: 16 GB of RAM
  - Storage: 120 GB 
 
 ## **SINGLE NODE AZURE STACK HCI REQUIREMENTS:**
-Make sure your system meets the Single-Node Azure Stack HCI minimum host resources from the following URL: 
- - https://learn.microsoft.com/en-us/azure-stack/hci/concepts/system-requirements
+Make sure your system meets the [System requirements for Azure Stack HCI](https://learn.microsoft.com/en-us/azure-stack/hci/concepts/system-requirements?tabs=azure-public#server-requirements) for server and storage. The [physical networking requirements for Single Node Azure Stack HCI](https://learn.microsoft.com/en-us/azure-stack/hci/plan/single-server-deployment#physical-connectivity-components) can be summarized:
+- Management & compute:  At least 1 Gbps; 10 Gbps recommended. Two teamed ports.
+- Storage: (**OPTIONAL**, to allow for adding a second server). At least 1 Gbps; 10 Gbps recommended.
+- BMC: Check with hardware manufacturer.
+
+In addition, the following diagram summarizes the [physical network connectivity](https://learn.microsoft.com/en-us/azure-stack/hci/plan/single-server-deployment#network-atc-intents) used for a Single Node Azure Stack HCI deployment.
+![image](https://github.com/pmfarley/SNO-AzureStackHCI/assets/48925593/bb70364a-e585-4856-8a18-25e62d886f8e)
+
 
 I installed Single-Node Azure Stack HCI onto a 1U rack server, with the following specs:
 - CPU: 
