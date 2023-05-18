@@ -209,15 +209,9 @@ Return to the OpenShift Assisted Installer.
 
 **e. Monitor the installation progress.**
 
-<p align="center"><img width="800" alt="image" src="https://user-images.githubusercontent.com/48925593/192870231-ed154ce4-e90a-4acb-b21b-48896274144b.png"></p>
-
 <p align="center"><img width="800" alt="image" src="https://user-images.githubusercontent.com/48925593/192866418-1ea22b75-6862-47c5-bdc8-504119a2b38a.png"></p>
- 
-<p align="center"><img width="800" alt="image" src="https://user-images.githubusercontent.com/48925593/192867012-a9efca61-ded2-414d-834f-2e43da334b6e.png"></p>
 
 <p align="center"><img width="800" alt="image" src="https://user-images.githubusercontent.com/48925593/192869246-12d4d4e4-9434-489d-8e8c-e31eb01bd6cf.png"></p>
-
-<p align="center"><img width="800" alt="image" src="https://user-images.githubusercontent.com/48925593/192872090-5b63d1ff-f1ff-44ac-8ffa-8e038dc8c8d6.png"></p>
 
 **e. Installation Complete.**
 
