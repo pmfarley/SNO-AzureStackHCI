@@ -38,6 +38,7 @@ You can learn more about the single-node Azure Stack HCI clusters on Microsoft D
  - https://learn.microsoft.com/en-us/azure-stack/hci/concepts/single-server-clusters
  - https://learn.microsoft.com/en-us/azure-stack/hci/deploy/single-server
 
+<br></br>
 ## **STEP 1. INSTALL THE AZURE STACK HCI OS ON YOUR SERVER.**
 
 <p align="center"><img width="800" alt="image" src="https://user-images.githubusercontent.com/48925593/192880327-f4fcc44c-dc0d-4c01-b6eb-df27718b2183.png"></p>
@@ -46,6 +47,7 @@ You can learn more about the single-node Azure Stack HCI clusters on Microsoft D
 Perform the steps from the following URL, to download and install the Azure Stack HCI Operating System:
  - https://learn.microsoft.com/en-us/azure-stack/hci/deploy/operating-system
 
+<br></br>
 ## **STEP 2. CONFIGURE THE SERVER UTILIZING THE SERVER CONFIGURATION TOOL (SCONFIG).**
 
 <p align="center"><img width="800" alt="image" src="https://user-images.githubusercontent.com/48925593/192880152-8f8d247b-825e-438c-b622-35413f521440.png"></p>
@@ -58,6 +60,7 @@ Configure the server by performing these steps in SConfig:
 
 **c. Select 6 to install the latest updates.**
 
+<br></br>
 ## **STEP 3. INSTALL THE REQUIRED ROLES AND FEATURES WITH POWERSHELL.**
 
 Run this `Install-WindowsFeature` command to install the required roles and features from PowerShell:
@@ -65,7 +68,7 @@ Run this `Install-WindowsFeature` command to install the required roles and feat
    ```bash
    Install-WindowsFeature -Name "BitLocker", "Data-Center-Bridging", "Failover-Clustering", "FS-FileServer", "FS-Data-Deduplication", "Hyper-V", "Hyper-V-PowerShell", "RSAT-AD-Powershell", "RSAT-Clustering-PowerShell", "NetworkATC", "Storage-Replica" -IncludeAllSubFeature -IncludeManagementTools
    ```
-
+<br></br>
 ## **STEP 4. CREATE AN AZURE STACK HCI CLUSTER WITH POWERSHELL.**
 
 Run this `New-Cluster` command to create an Azure Stack HCI cluster from PowerShell:
@@ -78,7 +81,7 @@ Here's the command that I ran from PowerShell:
    New-Cluster -Name AZSHCI-cluster -Node AZSHCI -NOSTORAGE -StaticAddress 192.168.2.183
    ```
    
-
+<br></br>
 ## **STEP 5. REGISTER THE CLUSTER WITH POWERSHELL [OR WINDOWS ADMIN CENTER].**
 
 Run these `Install-Module` and `Register-AzStackHCI` commands from PowerShell:
@@ -87,44 +90,38 @@ Run these `Install-Module` and `Register-AzStackHCI` commands from PowerShell:
    
    Register-AzStackHCI  -SubscriptionId "<subscription_ID>" -ResourceGroupName <resourcegroup>
    ```
-
+<br></br>
 ## **STEP 6. CREATE VOLUMES WITH POWERSHELL.**
 
 Run this `New-Volume` command to create a volume from PowerShell:
    ```bash
    New-Volume -FriendlyName "S2D on AZSHCI-cluster" -Size 1TB -ProvisioningType Thin
    ```
-
+<br></br>
 ## **STEP 7. GENERATE DISCOVERY ISO FROM THE ASSISTED INSTALLER:**
 
-**a. Open the [OpenShift Assisted Installer from the Red Hat Hybrid Cloud Console](https://console.redhat.com/openshift/assisted-installer/clusters/):** 
+**a. Open the OpenShift Assisted Installer from the [_Red Hat Hybrid Cloud Console_](https://console.redhat.com/openshift/assisted-installer/clusters/):** 
  - You will be prompted for your `Red Hat ID` and `password` to login.
 
 **b. Select '_Create cluster_'.**
 
 <p align="center"><img width="500" alt="image" src="https://user-images.githubusercontent.com/48925593/192834456-7c792bf6-270e-43bf-890a-0b08800c135c.png"></p>
 
-
-
 **b. From the '_Cluster details_' step, enter the cluster name, the base domain; then select '_OpenShift 4.11.5_' and '_Install single node OpenShift (SNO)_', and click '_Next_'.**
 
 <p align="center"><img width="800" alt="image" src="https://user-images.githubusercontent.com/48925593/192830931-2ffbf143-bd24-4207-a454-b654e5c61e72.png"></p>
-
 
 **c. On the '_Operators_' step, click '_Next_'.**
 
 <p align="center"><img width="800" alt="image" src="https://user-images.githubusercontent.com/48925593/192830345-95deccd9-a662-4cd2-ae5a-1c7174d1d50b.png"></p>
 
-
 **d. On the '_Host discovery_' step, select '_Add host_'.**
 
 <p align="center"><img width="800" alt="image" src="https://user-images.githubusercontent.com/48925593/192832043-bfb9dd47-4003-4a61-b87c-3525d0200edc.png"></p>
 
-
 **e. Select '_Minimal Image File_' and '_Generate Discovery ISO_'.**
 
 <p align="center"><img width="500" alt="image" src="https://user-images.githubusercontent.com/48925593/192832846-14bc0b90-9294-4e7d-adc1-b6745b4752e0.png"></p>
-
 
 **f. Click on the '_Download Discovery ISO_' button.**
 
@@ -132,10 +129,9 @@ Save this ISO file for use in a later step, when creating the Virtual Machine fo
 
 <p align="center"><img width="500" alt="image" src="https://user-images.githubusercontent.com/48925593/192833572-c3976b7e-da62-430c-ad46-6ab635504e0e.png"></p>
 
-
 **g. Click '_Close_' to return to the previous screen.**
 
-
+<br></br>
 ## **STEP 8. FROM WINDOWS ADMIN CENTER, CREATE A VIRTUAL MACHINE FOR SINGLE NODE OPENSHIFT**
 
 Install **Windows Admin Center**, which is the web-based management interface to manage Azure Stack HCI. You can install it onto a management PC, a Windows Server, or you may use it from the Azure Portal. For more information on installing and using Windows Admin Center in your environment, refer to the following URLs:
@@ -144,18 +140,15 @@ Install **Windows Admin Center**, which is the web-based management interface to
  - https://learn.microsoft.com/en-us/windows-server/manage/windows-admin-center/azure/manage-hci-clusters
  - https://learn.microsoft.com/en-us/azure-stack/hci/manage/vm
 
-
 **a. From Windows Admin Center, navigate to 'Virtual Machines', select '_Add_, _+New_'.**
 
 <p align="center"><img width="800" alt="image" src="https://user-images.githubusercontent.com/48925593/192840528-9b103985-8105-4465-8650-95c3bd1b5ea1.png"></p>
-
 
 **b. Enter the Virtual Machine Name, and the virtual processors, memory, and network settings.**
 
 The minimum resource requirements for Single-Node OpenShift are **CPU**: 8 vCPUs, **Memory**: 16 GB, **Storage**: 120 GB 
 
 <p align="center"><img width="500" alt="image" src="https://user-images.githubusercontent.com/48925593/192877497-2a7ba0f1-06da-461c-b1b9-93557bf6f212.png"></p>
-
 
 **c. Continue, scrolling down to the Storage category, select '_+ Add_' and continuing below.**
 
@@ -177,10 +170,9 @@ The minimum resource requirements for Single-Node OpenShift are **CPU**: 8 vCPUs
 
 <p align="center"><img width="800" alt="image" src="https://user-images.githubusercontent.com/48925593/192849753-1f984931-1b11-4a58-a605-bc81477dbf67.png"></p>
 
-This will allow you to boot from the Discovery ISO image, without it having a signed hash.  
-For more information see [_Generation 2 virtual machine security settings for Hyper-V_](https://learn.microsoft.com/en-us/windows-server/virtualization/hyper-v/learn-more/generation-2-virtual-machine-security-settings-for-hyper-v).
+This will allow you to boot from the Discovery ISO image, without it having a signed hash.  For more information see [_Generation 2 virtual machine security settings for Hyper-V_](https://learn.microsoft.com/en-us/windows-server/virtualization/hyper-v/learn-more/generation-2-virtual-machine-security-settings-for-hyper-v).
 
-
+<br></br>
 ## **STEP 9. BOOT THE VIRTUAL MACHINE FROM THE DISCOVERY ISO:**
 
 **a. From _Virtual Machines_, select the VM and then '_Power_, _Start_'.**
@@ -191,7 +183,7 @@ For more information see [_Generation 2 virtual machine security settings for Hy
 
 <p align="center"><img width="500" alt="image" src="https://user-images.githubusercontent.com/48925593/192855462-8d72d335-a40d-4722-bbc3-a99415e3fdbb.png"></p>
 
-
+<br></br>
 ## **STEP 10. RETURN TO THE ASSISTED INSTALLER TO FINISH THE INSTALLATION:**
 
 Return to the OpenShift Assisted Installer.
@@ -205,17 +197,15 @@ Return to the OpenShift Assisted Installer.
  
 <p align="center"><img width="800" alt="image" src="https://user-images.githubusercontent.com/48925593/192862082-54e1eee0-ec2e-4e61-acf6-728b74bd2a9f.png"></p>
 
- **b. From the '_Networking_' menu, confirm the discovered/selected 'machine network', and click on '_Next_' to proceed.**
+ **c. From the '_Networking_' menu, confirm the discovered/selected 'machine network', and click on '_Next_' to proceed.**
 
 <p align="center"><img width="800" alt="image" src="https://user-images.githubusercontent.com/48925593/192863902-ad33c29f-80c8-4ceb-925f-0f66d3bf5985.png"></p>
 
-
-**c. Review the configuration, and click on '_Install Cluster_'.**
+**d. Review the configuration, and click on '_Install Cluster_'.**
 
 <p align="center"><img width="800" alt="image" src="https://user-images.githubusercontent.com/48925593/192865038-fff12a98-2c64-4f8f-a26a-e8d9f9fabb55.png"></p>
 
-
-**d. Monitor the installation progress.**
+**e. Monitor the installation progress.**
 
 <p align="center"><img width="800" alt="image" src="https://user-images.githubusercontent.com/48925593/192870231-ed154ce4-e90a-4acb-b21b-48896274144b.png"></p>
 
@@ -227,11 +217,14 @@ Return to the OpenShift Assisted Installer.
 
 <p align="center"><img width="800" alt="image" src="https://user-images.githubusercontent.com/48925593/192872090-5b63d1ff-f1ff-44ac-8ffa-8e038dc8c8d6.png"></p>
 
-
 **e. Installation Complete.**
 
 Upon completion, you'll see the summary of the installation, and you'll be able to _download the kubeconfig file_, 
 _copy the kubeadmin password_, and _launch the OpenShift Web console_.
 
 <p align="center"><img width="800" alt="image" src="https://user-images.githubusercontent.com/48925593/192879833-50de1600-9bd6-4446-9d6b-bfe62953d754.png"></p>
+
+<br></br>
+
+## **CONCLUSTION**
 
