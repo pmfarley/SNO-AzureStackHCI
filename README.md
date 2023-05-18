@@ -1,5 +1,5 @@
-# SNO-AzureStackHCI
-Installing Single Node OpenShift (SNO) on a Single Node Azure Stack HCI using the OpenShift Assisted-Installer.
+# Single Node OpenShift on Single Node Azure Stack HCI 
+Within this blog, I will provide the process for installing Single Node OpenShift (SNO) on a Single Node Azure Stack HCI server using the OpenShift Assisted-Installer.
 
 
 ## **SINGLE NODE OPENSHIFT REQUIREMENTS:**
