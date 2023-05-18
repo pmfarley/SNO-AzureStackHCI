@@ -12,6 +12,10 @@ Single-Node OpenShift has the following [minimum resource requirements](https://
 
 ## **SINGLE NODE AZURE STACK HCI REQUIREMENTS:**
 Make sure your system meets the [System requirements for Azure Stack HCI](https://learn.microsoft.com/en-us/azure-stack/hci/concepts/system-requirements?tabs=azure-public#server-requirements) for server and storage. 
+ - **CPU**: Intel or AMD Processor of at least 1.4 GHz, and compatible with the x64 instruction set.
+ - **Memory**: minimum of 32 GB of RAM for server operating system, VMs, and other apps or workloads.
+ - **BIOS/UEFI settings**:  virtualization support is enabled for: Hardware-assisted virtualization and Hardware-enforced Data Execution Prevention (DEP). 
+ - **Storage**: boot device supported by Windows Server. A 200 GB minimum size is recommended.
 
 The [physical networking requirements for Single Node Azure Stack HCI](https://learn.microsoft.com/en-us/azure-stack/hci/plan/single-server-deployment#physical-connectivity-components) can be summarized:
 - **Management & compute**:  At least 1 Gbps; 10 Gbps recommended. Two teamed ports.
@@ -44,8 +48,7 @@ You can learn more about the single-node Azure Stack HCI clusters on Microsoft D
 <p align="center"><img width="800" alt="image" src="https://user-images.githubusercontent.com/48925593/192880327-f4fcc44c-dc0d-4c01-b6eb-df27718b2183.png"></p>
 
 
-Perform the steps from the following URL, to download and install the Azure Stack HCI Operating System:
- - https://learn.microsoft.com/en-us/azure-stack/hci/deploy/operating-system
+Perform the steps from [_Deploy the Azure Stack HCI operating system_](https://learn.microsoft.com/en-us/azure-stack/hci/deploy/operating-system), to download and install the Azure Stack HCI Operating System.
 
 <br></br>
 ## **STEP 2. CONFIGURE THE SERVER UTILIZING THE SERVER CONFIGURATION TOOL (SCONFIG).**
