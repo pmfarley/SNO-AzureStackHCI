@@ -10,18 +10,18 @@ Single-Node OpenShift has the following minimum resource requirements:
  - Storage: 120 GB 
 
 ## **SINGLE NODE AZURE STACK HCI REQUIREMENTS:**
-Single-Node Azure Stack HCI requires the following minimum host resources: 
+Make sure your system meets the Single-Node Azure Stack HCI minimum host resources from the following URL: 
  - https://learn.microsoft.com/en-us/azure-stack/hci/concepts/system-requirements
 
-I installed Single-Node Azure Stack HCI on a Cisco C220M4 server, with the following
+I installed Single-Node Azure Stack HCI onto a 1U rack server, with the following specs:
 - CPU: 
   - Intel(R) Xeon(R) CPU E5-2680 v3 @ 2.50GHz (12 core)
 - Memory: 384 GB
 - Storage: 
-  - (1) 120GB SATA SSD (boot)
+  - (1) 120GB SATA SSD (boot/operating system)
   - (3) 400GB SAS SSD (storage pool)
 - Network: 
-  - Onboard dual-port 1GigE I350 LOM
+  - Onboard dual-port 1GigE Intel I350 LOM
   - Mellanox ConnectX-4 LX dual-port 1/10/25/40/50 Gigabit Ethernet adapter 
 
 You can learn more about the single-node Azure Stack HCI clusters on Microsoft Docs: 
@@ -33,7 +33,7 @@ You can learn more about the single-node Azure Stack HCI clusters on Microsoft D
  ![image](https://user-images.githubusercontent.com/48925593/192880327-f4fcc44c-dc0d-4c01-b6eb-df27718b2183.png)
 
 
-Perform these steps to download and install the Azure Stack HCI Operating System:
+Perform the steps from the following URL, to download and install the Azure Stack HCI Operating System:
  - https://learn.microsoft.com/en-us/azure-stack/hci/deploy/operating-system
 
 ## **STEP 2. CONFIGURE THE SERVER UTILIZING THE SERVER CONFIGURATION TOOL (SCONFIG).**
@@ -119,7 +119,7 @@ Run this `New-Volume` command to create a volume from PowerShell:
 
 **e. Click on the '_Download Discovery ISO_' button.**
 
-Save this file for use in a later step, when creating the Virtual Machine for SNO.
+Save this ISO file for use in a later step, when creating the Virtual Machine for SNO.
 
  ![image](https://user-images.githubusercontent.com/48925593/192833572-c3976b7e-da62-430c-ad46-6ab635504e0e.png)
 
@@ -129,7 +129,7 @@ Save this file for use in a later step, when creating the Virtual Machine for SN
 
 ## **STEP 8. FROM WINDOWS ADMIN CENTER, CREATE A VIRTUAL MACHINE FOR SINGLE NODE OPENSHIFT**
 
-To use **Windows Admin Center**, which is a web-based management interface used to manage Azure Stack HCI, you can install it on a management PC, a Windows Server, or use it from the Azure Portal. For more information, refer to:
+Install **Windows Admin Center**, which is the web-based management interface to manage Azure Stack HCI. You can install it onto a management PC, a Windows Server, or you may use it from the Azure Portal. For more information on installing and using Windows Admin Center in your environment, refer to the following URLs:
 
  - https://learn.microsoft.com/en-us/azure-stack/hci/get-started
  - https://learn.microsoft.com/en-us/windows-server/manage/windows-admin-center/azure/manage-hci-clusters
