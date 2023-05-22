@@ -48,14 +48,14 @@ You can learn more about the single-node Azure Stack HCI clusters on Microsoft D
 <p align="center"><img width="800" alt="image" src="https://user-images.githubusercontent.com/48925593/192880327-f4fcc44c-dc0d-4c01-b6eb-df27718b2183.png"></p>
 
 
-Perform the steps from [_Deploy the Azure Stack HCI operating system_](https://learn.microsoft.com/en-us/azure-stack/hci/deploy/operating-system), to download and install the Azure Stack HCI Operating System.
+Perform the steps from [_Deploy the Azure Stack HCI operating system_](https://learn.microsoft.com/en-us/azure-stack/hci/deploy/operating-system#manual-deployment), to download and install the Azure Stack HCI Operating System.
 
 <br></br>
 ## **STEP 2. CONFIGURE THE SERVER UTILIZING THE SERVER CONFIGURATION TOOL (SCONFIG).**
 
 <p align="center"><img width="800" alt="image" src="https://user-images.githubusercontent.com/48925593/192880152-8f8d247b-825e-438c-b622-35413f521440.png"></p>
 
-Configure the server by performing these steps in SConfig:
+Configure the server by performing these steps in [_SConfig_](https://learn.microsoft.com/en-us/windows-server/administration/server-core/server-core-sconfig#start-sconfig):
 
 **a. Select 8 to set the network addresses and DNS settings.**
 
