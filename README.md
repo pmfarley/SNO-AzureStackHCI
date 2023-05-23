@@ -112,11 +112,11 @@ Run this `New-Volume` command to create a volume from PowerShell:
 
 **c. From the '_Cluster details_' step, enter the cluster name, the base domain; then select '_OpenShift 4.13.0_' and '_Install single node OpenShift (SNO)_', and click '_Next_'.**
 
-<p align="center"><img width="800" alt="image" src="https://user-images.githubusercontent.com/48925593/192830931-2ffbf143-bd24-4207-a454-b654e5c61e72.png"></p>
+<p align="center"><img width="800" alt="image" src=step_7c.png"></p>
 
 **d. On the '_Operators_' step, click '_Next_'.**
 
-<p align="center"><img width="800" alt="image" src="https://user-images.githubusercontent.com/48925593/192830345-95deccd9-a662-4cd2-ae5a-1c7174d1d50b.png"></p>
+<p align="center"><img width="800" alt="image" src=step_7d.png"></p>
 
 **e. On the '_Host discovery_' step, select '_Add host_'.**
 
