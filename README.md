@@ -110,29 +110,29 @@ Run this `New-Volume` command to create a volume from PowerShell:
 
 <p align="center"><img width="500" alt="image" src="https://user-images.githubusercontent.com/48925593/192834456-7c792bf6-270e-43bf-890a-0b08800c135c.png"></p>
 
-**b. From the '_Cluster details_' step, enter the cluster name, the base domain; then select '_OpenShift 4.11.5_' and '_Install single node OpenShift (SNO)_', and click '_Next_'.**
+**c. From the '_Cluster details_' step, enter the cluster name, the base domain; then select '_OpenShift 4.11.5_' and '_Install single node OpenShift (SNO)_', and click '_Next_'.**
 
 <p align="center"><img width="800" alt="image" src="https://user-images.githubusercontent.com/48925593/192830931-2ffbf143-bd24-4207-a454-b654e5c61e72.png"></p>
 
-**c. On the '_Operators_' step, click '_Next_'.**
+**d. On the '_Operators_' step, click '_Next_'.**
 
 <p align="center"><img width="800" alt="image" src="https://user-images.githubusercontent.com/48925593/192830345-95deccd9-a662-4cd2-ae5a-1c7174d1d50b.png"></p>
 
-**d. On the '_Host discovery_' step, select '_Add host_'.**
+**e. On the '_Host discovery_' step, select '_Add host_'.**
 
 <p align="center"><img width="800" alt="image" src="https://user-images.githubusercontent.com/48925593/192832043-bfb9dd47-4003-4a61-b87c-3525d0200edc.png"></p>
 
-**e. Select '_Minimal Image File_' and '_Generate Discovery ISO_'.**
+**f. Select '_Minimal Image File_' and '_Generate Discovery ISO_'.**
 
 <p align="center"><img width="500" alt="image" src="https://user-images.githubusercontent.com/48925593/192832846-14bc0b90-9294-4e7d-adc1-b6745b4752e0.png"></p>
 
-**f. Click on the '_Download Discovery ISO_' button.**
+**g. Click on the '_Download Discovery ISO_' button.**
 
 Save this ISO file for use in a later step, when creating the Virtual Machine for SNO.
 
 <p align="center"><img width="500" alt="image" src="https://user-images.githubusercontent.com/48925593/192833572-c3976b7e-da62-430c-ad46-6ab635504e0e.png"></p>
 
-**g. Click '_Close_' to return to the previous screen.**
+**h. Click '_Close_' to return to the previous screen.**
 
 <br></br>
 ## **STEP 8. FROM WINDOWS ADMIN CENTER, CREATE A VIRTUAL MACHINE FOR SINGLE NODE OPENSHIFT**
@@ -213,7 +213,7 @@ Return to the OpenShift Assisted Installer.
 
 <p align="center"><img width="800" alt="image" src="https://user-images.githubusercontent.com/48925593/192869246-12d4d4e4-9434-489d-8e8c-e31eb01bd6cf.png"></p>
 
-**e. Installation Complete.**
+**f. Installation Complete.**
 
 Upon completion, you'll see the summary of the installation, and you'll be able to _download the kubeconfig file_, 
 _copy the kubeadmin password_, and _launch the OpenShift Web console_.
