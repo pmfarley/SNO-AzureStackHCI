@@ -106,11 +106,11 @@ Run this `New-Volume` command to create a volume from PowerShell:
 **a. Open the OpenShift Assisted Installer from the [_Red Hat Hybrid Cloud Console_](https://console.redhat.com/openshift/assisted-installer/clusters/):** 
  - You will be prompted for your `Red Hat ID` and `password` to login.
 
-**b. Select '_Create cluster_'.**
+**b. Select '_Create New Cluster_'.**
 
-<p align="center"><img width="500" alt="image" src="https://user-images.githubusercontent.com/48925593/192834456-7c792bf6-270e-43bf-890a-0b08800c135c.png"></p>
+<p align="center"><img width="800" alt="image" src="step_7b.png"></p>
 
-**c. From the '_Cluster details_' step, enter the cluster name, the base domain; then select '_OpenShift 4.11.5_' and '_Install single node OpenShift (SNO)_', and click '_Next_'.**
+**c. From the '_Cluster details_' step, enter the cluster name, the base domain; then select '_OpenShift 4.13.0_' and '_Install single node OpenShift (SNO)_', and click '_Next_'.**
 
 <p align="center"><img width="800" alt="image" src="https://user-images.githubusercontent.com/48925593/192830931-2ffbf143-bd24-4207-a454-b654e5c61e72.png"></p>
 
