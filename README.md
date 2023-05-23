@@ -10,6 +10,8 @@ Single-Node OpenShift has the following [minimum resource requirements](https://
  - **Memory**: 16 GB of RAM
  - **Storage**: 120 GB 
 
+To learn more about using the Assisted Installer, see the [Assisted Installer for OpenShift Container Platform documentation](https://access.redhat.com/documentation/en-us/assisted_installer_for_openshift_container_platform/2022/html-single/assisted_installer_for_openshift_container_platform/index) for details.
+
 ## **SINGLE NODE AZURE STACK HCI REQUIREMENTS:**
 Make sure your system meets the [System requirements for Azure Stack HCI](https://learn.microsoft.com/en-us/azure-stack/hci/concepts/system-requirements?tabs=azure-public#server-requirements) for server and storage. 
  - **CPU**: Intel or AMD Processor of at least 1.4 GHz, and compatible with the x64 instruction set.
@@ -220,6 +222,7 @@ _copy the kubeadmin password_, and _launch the OpenShift Web console_.
 
 <p align="center"><img width="800" alt="image" src="step_10f.png"></p>
 
+If you have problems accessing the OpenShift Web Console, the installation summary screen also provides some troubleshooting tips to check your DNS server or local configuration to resolve its hostname.  You can add/confirm the API and Ingress VIP addresses to your DNS server, or you can update your local `/etc/hosts` or `/etc/resolv.conf` files.  To access these troubleshooting tips, click on **_Not able to access the Web Console?_**
 <br></br>
 
 ## **CONCLUSION**
