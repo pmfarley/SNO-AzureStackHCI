@@ -193,32 +193,32 @@ Return to the OpenShift Assisted Installer.
  **a. You should see the SNO VM displayed in the list of discovered servers. 
       From the '_Host discovery_' menu, once the SNO VM is discovered, click '_Next_'.**
  
-<p align="center"><img width="800" alt="image" src="https://user-images.githubusercontent.com/48925593/192861346-ad01d9db-9a08-4d2e-a569-e8f826215499.png"></p>
+<p align="center"><img width="800" alt="image" src="step_10a.png"></p>
 
  **b. From the '_Storage_' menu, click on '_Next_' to proceed.**
  
-<p align="center"><img width="800" alt="image" src="https://user-images.githubusercontent.com/48925593/192862082-54e1eee0-ec2e-4e61-acf6-728b74bd2a9f.png"></p>
+<p align="center"><img width="800" alt="image" src="step_10b.png"></p>
 
  **c. From the '_Networking_' menu, confirm the discovered/selected 'machine network', and click on '_Next_' to proceed.**
 
-<p align="center"><img width="800" alt="image" src="https://user-images.githubusercontent.com/48925593/192863902-ad33c29f-80c8-4ceb-925f-0f66d3bf5985.png"></p>
+<p align="center"><img width="800" alt="image" src="step_10c.png"></p>
 
 **d. Review the configuration, and click on '_Install Cluster_'.**
 
-<p align="center"><img width="800" alt="image" src="https://user-images.githubusercontent.com/48925593/192865038-fff12a98-2c64-4f8f-a26a-e8d9f9fabb55.png"></p>
+<p align="center"><img width="800" alt="image" src="step_10d.png"></p>
 
 **e. Monitor the installation progress.**
 
-<p align="center"><img width="800" alt="image" src="https://user-images.githubusercontent.com/48925593/192866418-1ea22b75-6862-47c5-bdc8-504119a2b38a.png"></p>
+<p align="center"><img width="800" alt="image" src="step_10e1.png"></p>
 
-<p align="center"><img width="800" alt="image" src="https://user-images.githubusercontent.com/48925593/192869246-12d4d4e4-9434-489d-8e8c-e31eb01bd6cf.png"></p>
+<p align="center"><img width="800" alt="image" src="step_10e2.png"></p>
 
 **f. Installation Complete.**
 
 Upon completion, you'll see the summary of the installation, and you'll be able to _download the kubeconfig file_, 
 _copy the kubeadmin password_, and _launch the OpenShift Web console_.
 
-<p align="center"><img width="800" alt="image" src="https://user-images.githubusercontent.com/48925593/192879833-50de1600-9bd6-4446-9d6b-bfe62953d754.png"></p>
+<p align="center"><img width="800" alt="image" src="step_10f.png"></p>
 
 <br></br>
 
