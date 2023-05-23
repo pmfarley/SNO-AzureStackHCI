@@ -124,13 +124,13 @@ Run this `New-Volume` command to create a volume from PowerShell:
 
 **f. Select '_Minimal Image File_' and '_Generate Discovery ISO_'.**
 
-<p align="center"><img width="500" alt="image" src="https://user-images.githubusercontent.com/48925593/192832846-14bc0b90-9294-4e7d-adc1-b6745b4752e0.png"></p>
+<p align="center"><img width="500" alt="image" src="step_7f.png"></p>
 
 **g. Click on the '_Download Discovery ISO_' button.**
 
 Save this ISO file for use in a later step, when creating the Virtual Machine for SNO.
 
-<p align="center"><img width="500" alt="image" src="https://user-images.githubusercontent.com/48925593/192833572-c3976b7e-da62-430c-ad46-6ab635504e0e.png"></p>
+<p align="center"><img width="500" alt="image" src="step_7g.png"></p>
 
 **h. Click '_Close_' to return to the previous screen.**
 
