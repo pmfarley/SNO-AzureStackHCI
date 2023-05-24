@@ -67,7 +67,7 @@ You can learn more about the single-node Azure Stack HCI clusters on Microsoft D
 
 **d. On the '_Operators_' step, click '_Next_'.**
 
-<p align="center"><img width="800" alt="image" src="step_7d.png"></p>
+<p align="center"><img width="800" alt="image" src="step_7dd.png"></p>
 
 **e. On the '_Host discovery_' step, select '_Add host_'.**
 
