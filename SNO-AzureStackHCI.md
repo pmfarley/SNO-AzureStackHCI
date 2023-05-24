@@ -75,25 +75,31 @@ Save this ISO file for use in a later step, when creating the Virtual Machine fo
 
 **a. From Windows Admin Center, navigate to "Virtual Machines", select "_Add_, _+New_".**
 
-<p align="center"><img width="800" alt="image" src="https://user-images.githubusercontent.com/48925593/192840528-9b103985-8105-4465-8650-95c3bd1b5ea1.png"></p>
-
-**b. Enter the Virtual Machine Name, and the virtual processors, memory, and network settings.**
+<p align="center"><img width="800" alt="image" src="step_2a.png"></p>
 
 The minimum resource requirements for Single-Node OpenShift with the LVM Storage operator are **CPU**: 9 vCPUs, **Memory**: 16 GB, **Storage**: 120 GB 
 
-<p align="center"><img width="500" alt="image" src="https://user-images.githubusercontent.com/48925593/192877497-2a7ba0f1-06da-461c-b1b9-93557bf6f212.png"></p>
+**b. Enter the Virtual Machine Name.**
+
+<p align="center"><img width="500" alt="image" src="step_2b.png"></p>
+
+**c. Enter the virtual processors, memory, and network settings.**
+
+<p align="center"><img width="500" alt="image" src="step_2c.png"></p>
 
 **c. Continue, scrolling down to the Storage category, select "_+ Add_" and continuing below.**
 
-<p align="center"><img width="500" alt="image" src="https://user-images.githubusercontent.com/48925593/192877175-16796a24-5726-4582-af33-f62ab6d07537.png"></p>
+<p align="center"><img width="500" alt="image" src="step_2d.png"></p>
 
 **d. Continue, in the "_Storage_" category, create an empty virtual hard disk of at least 120GB.**
+
+<p align="center"><img width="500" alt="image" src="step_2e.png"></p>
 
 **e. Continue, in the "_Operating System_" category, select "Install an operating system from an image file (.iso)", and click on the "_Browse_" button to select the Discovery ISO file.**
 
 **NOTE:** You will have to transfer the Discovery ISO file from where you downloaded it earlier, to the Azure Stack HCI server.
 
-<p align="center"><img width="500" alt="image" src="https://user-images.githubusercontent.com/48925593/192877014-00efc4f4-dc20-4a14-b1b5-8df64fa2906e.png"></p>
+<p align="center"><img width="500" alt="image" src="step_2f.png"></p>
 
 **f. When complete, select "_Create_".**
 
