@@ -17,7 +17,7 @@ For more information, see the [Persistent storage using logical volume manager s
 
 To learn more about using the Assisted Installer, see the [Assisted Installer for OpenShift Container Platform documentation](https://access.redhat.com/documentation/en-us/assisted_installer_for_openshift_container_platform/2022/html-single/assisted_installer_for_openshift_container_platform/index) for details.
 
-## **SINGLE NODE AZURE STACK HCI REQUIREMENTS:**
+## **AZURE STACK HCI REQUIREMENTS:**
 Make sure your system meets the [System requirements for Azure Stack HCI](https://learn.microsoft.com/en-us/azure-stack/hci/concepts/system-requirements?tabs=azure-public#server-requirements) for server and storage. 
  - **CPU**: Intel or AMD Processor of at least 1.4 GHz, and compatible with the x64 instruction set.
  - **Memory**: minimum of 32 GB of RAM for server operating system, VMs, and other apps or workloads.
