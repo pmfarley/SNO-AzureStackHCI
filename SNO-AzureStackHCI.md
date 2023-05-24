@@ -1,5 +1,5 @@
-# Single Node OpenShift on Azure Stack HCI 
-Within this blog, I will provide the process for installing Single Node OpenShift (SNO) onto Azure Stack HCI, using the OpenShift Assisted-Installer.
+# Single Node OpenShift on HPE GreenLake for Azure Stack HCI 
+Within this blog, I will provide the process for installing Single Node OpenShift (SNO) onto HPE GreenLake for Azure Stack HCI, using the OpenShift Assisted-Installer.
 The combination of Single Node OpenShift running on a Azure Stack HCI provides a suitable platform for running edge and hybrid cloud workloads.  
 
 ## **SINGLE NODE OPENSHIFT REQUIREMENTS:**
@@ -17,11 +17,11 @@ For more information, see the [Persistent storage using logical volume manager s
 
 To learn more about using the Assisted Installer, see the [Assisted Installer for OpenShift Container Platform documentation](https://access.redhat.com/documentation/en-us/assisted_installer_for_openshift_container_platform/2022/html-single/assisted_installer_for_openshift_container_platform/index) for details.
 
-## **AZURE STACK HCI REQUIREMENTS:**
-Make sure your system meets the [System requirements for Azure Stack HCI](https://learn.microsoft.com/en-us/azure-stack/hci/concepts/system-requirements?tabs=azure-public#server-requirements) for server and storage. 
- - **CPU**: Intel or AMD Processor of at least 1.4 GHz, and compatible with the x64 instruction set.
- - **Memory**: minimum of 32 GB of RAM for server operating system, VMs, and other apps or workloads.
- - **BIOS/UEFI settings**:  virtualization support is enabled for: Hardware-assisted virtualization and Hardware-enforced Data Execution Prevention (DEP). 
+## **HPE GREENLAKE FOR MICROSOFT AZURE STACK HCI**
+Make sure your system meets the. 
+ - **Integrated system**: Intel or AMD Processor of at least 1.4 GHz, and compatible with the x64 instruction set.
+ - **Monthly billing**: minimum of 32 GB of RAM for server operating system, VMs, and other apps or workloads.
+ - **Single bill**:  virtualization support is enabled for: Hardware-assisted virtualization and Hardware-enforced Data Execution Prevention (DEP). 
  - **Storage**: boot device supported by Windows Server. A 200 GB minimum size is recommended.
 
 The [physical networking requirements for Single Node Azure Stack HCI](https://learn.microsoft.com/en-us/azure-stack/hci/plan/single-server-deployment#physical-connectivity-components) can be summarized:
