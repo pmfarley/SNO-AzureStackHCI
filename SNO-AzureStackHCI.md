@@ -25,30 +25,16 @@ Get reliable solid performance and high availability for HCI—all through a pay
 
 For additional details, see the [HPE GreenLake for Microsoft Azure Stack HCI solution brief](https://www.hpe.com/psnow/doc/a50003801enw.pdf?jumpid=in_pdfviewer-psnow).
 
-The following diagram shows the HPE GreenLake for Microsoft Azure Stack HCI environment used for this installation of Red Hat OpenShift.
+The following diagram shows the HPE GreenLake for Microsoft Azure Stack HCI environment used for this installation of Red Hat OpenShift:
 
 <p align="center"><img width="450" alt="image" src="HPEGreenLakeforAzureStackHCI.png"></p>
-
-
-I installed Azure Stack HCI onto a 1U rack server, with the following specs:
-- CPU: 
-  - Intel(R) Xeon(R) CPU E5-2680 v3 @ 2.50GHz (12 core)
-- Memory: 384 GB
-- Storage: 
-  - (1) 120GB SATA SSD (boot/operating system)
-  - (3) 400GB SAS SSD (storage pool)
-- Network: 
-  - Onboard dual-port 1GigE Intel I350 LOM
-  - Mellanox ConnectX-4 LX dual-port 1/10/25/40/50 Gigabit Ethernet adapter 
-
-You can learn more about the single-node Azure Stack HCI clusters on Microsoft Docs: 
- - [_Using Azure Stack HCI on a single server_](https://learn.microsoft.com/en-us/azure-stack/hci/concepts/single-server-clusters)
- - [_Deploy Azure Stack HCI on a single server_](https://learn.microsoft.com/en-us/azure-stack/hci/deploy/single-server)
 
 <br></br>
 <br></br>
 
 ## **STEP 1. GENERATE DISCOVERY ISO FROM THE ASSISTED INSTALLER:**
+
+Perform the following steps to install Single Node OpenShift (SNO) onto HPE GreenLake for Azure Stack HCI:
 
 **a. Open the OpenShift Assisted Installer from the [_Red Hat Hybrid Cloud Console_](https://console.redhat.com/openshift/assisted-installer/clusters/):** 
  - You will be prompted for your `Red Hat ID` and `password` to login.
