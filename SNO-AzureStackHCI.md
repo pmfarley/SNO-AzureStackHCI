@@ -8,7 +8,7 @@ Single-Node OpenShift has the following [minimum resource requirements](https://
  - **Memory**: 16 GB of RAM
  - **Storage**: 120 GB 
 
-In addition, the Assisted Installer can install the LVM Storage operator to manage persistent storage for OpenShift. Additional requirements for the LVM Storage operator are:
+In addition, the Assisted Installer can install the _Logical Volume Manager Storage operator_ to manage persistent storage for OpenShift. Additional requirements for the LVM Storage operator are:
  - **CPU**: 1 vCPU cores
  - **Memory**: 400 MiB of RAM
  - **Storage**: 1 additional installation disk (empty) 
