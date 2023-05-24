@@ -73,39 +73,44 @@ Save this ISO file for use in a later step, when creating the Virtual Machine fo
  - [_Manage Azure Stack HCI clusters using Windows Admin Center in Azure (preview)_](https://learn.microsoft.com/en-us/windows-server/manage/windows-admin-center/azure/manage-hci-clusters)
  - [_Manage VMs with Windows Admin Center_](https://learn.microsoft.com/en-us/azure-stack/hci/manage/vm)
 
-**a. From Windows Admin Center, navigate to "Virtual Machines", select "_Add_, _+New_".**
+   **a. From Windows Admin Center, navigate to "Virtual Machines", select "_Add_, _+New_".**
 
 <p align="center"><img width="800" alt="image" src="step_2a.png"></p>
 
 The minimum resource requirements for Single-Node OpenShift with the LVM Storage operator are **CPU**: 9 vCPUs, **Memory**: 16 GB, **Storage**: 120 GB 
 
-**b. Enter the Virtual Machine Name.**
+   **b. Enter the Virtual Machine Name.**
 
 <p align="center"><img width="500" alt="image" src="step_2b.png"></p>
 
-**c. Enter the virtual processors, memory, and network settings.**
+   **c. Continue, scrolling down, enter the Virtual processors and Memory settings.**
 
 <p align="center"><img width="500" alt="image" src="step_2c.png"></p>
 
-**c. Continue, scrolling down to the Storage category, select "_+ Add_" and continuing below.**
+   **d. Continue, scrolling down, selecting the Network virtual switch for your environment.**
+
+   **Then, click on "_+ Add_" under Storage to create new disk 1, continuing below.**
 
 <p align="center"><img width="500" alt="image" src="step_2d.png"></p>
 
-**d. Continue, in the "_Storage_" category, create an empty virtual hard disk of at least 120GB.**
+   **e. Continue, by creating an empty virtual hard disk of at least 120GB for disk 1.**
+
+   **Then, click on "_+ Add_" to create new disk 2, continuing below.**
 
 <p align="center"><img width="500" alt="image" src="step_2e.png"></p>
 
-**e. Continue, in the "_Operating System_" category, select "Install an operating system from an image file (.iso)", and click on the "_Browse_" button to select the Discovery ISO file.**
+   **f. Continue, by creating an empty virtual hard disk of at least 100GB for disk 2.**
 
-**NOTE:** You will have to transfer the Discovery ISO file from where you downloaded it earlier, to the Azure Stack HCI server.
+   **In the "_Operating System_" category, select "Install an operating system from an image file (.iso)", and click on the "_Browse_" button to select the Discovery ISO file.**
+   
+   **When complete, select "_Create_".**
+   
+   **NOTE:** You will have to transfer the Discovery ISO file from where you downloaded it earlier, to the Azure Stack HCI server.
 
 <p align="center"><img width="500" alt="image" src="step_2f.png"></p>
 
-**f. When complete, select "_Create_".**
 
-<p align="center"><img width="500" alt="image" src="https://user-images.githubusercontent.com/48925593/192847552-a68eaf2d-6a02-4f4b-8b94-c4ceb544a4fe.png"></p>
-
-**g. Continue by editing the settings for the VM. Click on "_Settings_" (the gear icon), then under the _Security_ category, uncheck "_Enable Secure Boot_". Select "_Save Security Settings_", then click "_Close_".**
+   **g. Continue by editing the settings for the VM. Click on "_Settings_" (the gear icon), then under the _Security_ category, uncheck "_Enable Secure Boot_". Select "_Save Security Settings_", then click "_Close_".**
 
 <p align="center"><img width="800" alt="image" src="https://user-images.githubusercontent.com/48925593/192849753-1f984931-1b11-4a58-a605-bc81477dbf67.png"></p>
 
