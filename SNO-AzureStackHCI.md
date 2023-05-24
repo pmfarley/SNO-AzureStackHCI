@@ -28,8 +28,6 @@ For additional details, see the [HPE GreenLake for Microsoft Azure Stack HCI sol
 The following diagram shows the HPE GreenLake for Microsoft Azure Stack HCI environment used for this installation of Red Hat OpenShift:
 
 <p align="center"><img width="450" alt="image" src="HPEGreenLakeforAzureStackHCI.png"></p>
-
-<br></br>
 <br></br>
 
 ## **STEP 1. GENERATE DISCOVERY ISO FROM THE ASSISTED INSTALLER:**
