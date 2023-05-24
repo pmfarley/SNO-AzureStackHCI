@@ -12,6 +12,7 @@ In addition, the Assisted Installer can install the LVM Storage operator to mana
  - **CPU**: 1 vCPU cores
  - **Memory**: 400 MiB of RAM
  - **Storage**: 1 additional installation disk (empty) 
+
 For more information, see the [Persistent storage using logical volume manager storage documentation](https://docs.openshift.com/container-platform/4.13/storage/persistent_storage/persistent_storage_local/persistent-storage-using-lvms.html).
 
 To learn more about using the Assisted Installer, see the [Assisted Installer for OpenShift Container Platform documentation](https://access.redhat.com/documentation/en-us/assisted_installer_for_openshift_container_platform/2022/html-single/assisted_installer_for_openshift_container_platform/index) for details.
