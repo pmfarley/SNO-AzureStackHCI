@@ -18,20 +18,16 @@ For more information, see the [Persistent storage using logical volume manager s
 To learn more about using the Assisted Installer, see the [Assisted Installer for OpenShift Container Platform documentation](https://access.redhat.com/documentation/en-us/assisted_installer_for_openshift_container_platform/2022/html-single/assisted_installer_for_openshift_container_platform/index) for details.
 
 ## **HPE GREENLAKE FOR MICROSOFT AZURE STACK HCI**
-Make sure your system meets the. 
- - **Integrated system**: Intel or AMD Processor of at least 1.4 GHz, and compatible with the x64 instruction set.
- - **Monthly billing**: minimum of 32 GB of RAM for server operating system, VMs, and other apps or workloads.
- - **Single bill**:  virtualization support is enabled for: Hardware-assisted virtualization and Hardware-enforced Data Execution Prevention (DEP). 
- - **Storage**: boot device supported by Windows Server. A 200 GB minimum size is recommended.
+Get reliable solid performance and high availability for HCI—all through a pay-per-use model, using native Azure experience and capabilities. HPE GreenLake for Microsoft Azure Stack HCI features a choice of ready-to-go validated solution configurations, based on specific HPE technologies that are tested, optimized, and validated with Azure Stack HCI OS. 
+ - **Integrated system**: HW, SW and services solution delivered as-a-service and with a pay-as-you-go model.
+ - **Monthly billing** from HPE based on consumption of compute and storage resources.
+ - **Single bill** can include all charges--including AzureStack HCI, Azure Services (backup, etc), with HPE as the CSP. 
 
-The [physical networking requirements for Single Node Azure Stack HCI](https://learn.microsoft.com/en-us/azure-stack/hci/plan/single-server-deployment#physical-connectivity-components) can be summarized:
-- **Management & compute**:  At least 1 Gbps; 10 Gbps recommended. Two teamed ports.
-- **Storage**: (**OPTIONAL**, to allow for adding a second server). At least 1 Gbps; 10 Gbps recommended.
-- **BMC**: Varies based on server hardware manufacturer; most are at least 1 Gbps.
+For additional details, see the [HPE GreenLake for Microsoft Azure Stack HCI solution brief](https://www.hpe.com/psnow/doc/a50003801enw.pdf?jumpid=in_pdfviewer-psnow).
 
-The following diagram summarizes the physical network connectivity used for a Single Node Azure Stack HCI deployment.
+The following diagram shows the HPE GreenLake for Microsoft Azure Stack HCI environment used for this installation of Red Hat OpenShift.
 
-<p align="center"><img width="450" alt="image" src="https://github.com/pmfarley/SNO-AzureStackHCI/assets/48925593/3b6235f0-7722-4f68-911a-b76f49b6207c"></p>
+<p align="center"><img width="450" alt="image" src="HPEGreenLakeforAzureStackHCI.png"></p>
 
 
 I installed Azure Stack HCI onto a 1U rack server, with the following specs:
