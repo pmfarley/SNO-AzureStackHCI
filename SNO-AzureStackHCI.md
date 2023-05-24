@@ -1,14 +1,18 @@
-# Single Node OpenShift on Single Node Azure Stack HCI 
-Within this blog, I will provide the process for installing a Single Node Azure Stack HCI server, and using the OpenShift Assisted-Installer to install Single Node OpenShift (SNO) onto it.
-If installing Red Hat OpenShift onto an existing Azure Stack HCI environment, you could skip directly to _STEP 7_.
-
-The combination of Single Node OpenShift running on a Single Node Azure Stack HCI server provides a suitable platform for running edge workloads.  In addition, OpenShift running on Azure Stack HCI on-premises can be used along with OpenShift running in Microsoft Azure to provide a solution for hybrid cloud workloads.
+# Single Node OpenShift on Azure Stack HCI 
+Within this blog, I will provide the process for installing Single Node OpenShift (SNO) onto Azure Stack HCI, using the OpenShift Assisted-Installer.
+The combination of Single Node OpenShift running on a Azure Stack HCI provides a suitable platform for running edge and hybrid cloud workloads.  
 
 ## **SINGLE NODE OPENSHIFT REQUIREMENTS:**
 Single-Node OpenShift has the following [minimum resource requirements](https://docs.openshift.com/container-platform/4.11/installing/installing_sno/install-sno-preparing-to-install-sno.html#install-sno-requirements-for-installing-on-a-single-node_install-sno-preparing):
  - **CPU**: 8 vCPU cores
  - **Memory**: 16 GB of RAM
  - **Storage**: 120 GB 
+
+In addition, the Assisted Installer can install the LVM Storage operator to manage persistent storage for OpenShift. Additional requirements for the LVM Storage operator are:
+ - **CPU**: 1 vCPU cores
+ - **Memory**: 400 MiB of RAM
+ - **Storage**: 1 additional installation disk (empty) 
+For more information, see the [Persistent storage using logical volume manager storage documentation](https://docs.openshift.com/container-platform/4.13/storage/persistent_storage/persistent_storage_local/persistent-storage-using-lvms.html).
 
 To learn more about using the Assisted Installer, see the [Assisted Installer for OpenShift Container Platform documentation](https://access.redhat.com/documentation/en-us/assisted_installer_for_openshift_container_platform/2022/html-single/assisted_installer_for_openshift_container_platform/index) for details.
 
@@ -24,12 +28,12 @@ The [physical networking requirements for Single Node Azure Stack HCI](https://l
 - **Storage**: (**OPTIONAL**, to allow for adding a second server). At least 1 Gbps; 10 Gbps recommended.
 - **BMC**: Varies based on server hardware manufacturer; most are at least 1 Gbps.
 
-In addition, the following diagram summarizes the [physical network connectivity](https://learn.microsoft.com/en-us/azure-stack/hci/plan/single-server-deployment#network-atc-intents) used for a Single Node Azure Stack HCI deployment.
+The following diagram summarizes the physical network connectivity used for a Single Node Azure Stack HCI deployment.
 
 <p align="center"><img width="450" alt="image" src="https://github.com/pmfarley/SNO-AzureStackHCI/assets/48925593/3b6235f0-7722-4f68-911a-b76f49b6207c"></p>
 
 
-I installed Single-Node Azure Stack HCI onto a 1U rack server, with the following specs:
+I installed Azure Stack HCI onto a 1U rack server, with the following specs:
 - CPU: 
   - Intel(R) Xeon(R) CPU E5-2680 v3 @ 2.50GHz (12 core)
 - Memory: 384 GB
@@ -45,65 +49,9 @@ You can learn more about the single-node Azure Stack HCI clusters on Microsoft D
  - [_Deploy Azure Stack HCI on a single server_](https://learn.microsoft.com/en-us/azure-stack/hci/deploy/single-server)
 
 <br></br>
-## **STEP 1. INSTALL THE AZURE STACK HCI OS ON YOUR SERVER.**
-
-<p align="center"><img width="800" alt="image" src="https://user-images.githubusercontent.com/48925593/192880327-f4fcc44c-dc0d-4c01-b6eb-df27718b2183.png"></p>
-
-
-Perform the steps from [_Deploy the Azure Stack HCI operating system_](https://learn.microsoft.com/en-us/azure-stack/hci/deploy/operating-system#manual-deployment), to download and install the Azure Stack HCI Operating System.
-
 <br></br>
-## **STEP 2. CONFIGURE THE SERVER UTILIZING THE SERVER CONFIGURATION TOOL (SCONFIG).**
 
-<p align="center"><img width="800" alt="image" src="https://user-images.githubusercontent.com/48925593/192880152-8f8d247b-825e-438c-b622-35413f521440.png"></p>
-
-Configure the server by performing these steps in [_SConfig_](https://learn.microsoft.com/en-us/windows-server/administration/server-core/server-core-sconfig#start-sconfig):
-
-**a. Select 8 to set the network addresses and DNS settings.**
-
-**b. Select 2 & 3 to set the computername and join an Active Directory Domain.**
-
-**c. Select 6 to install the latest updates.**
-
-<br></br>
-## **STEP 3. INSTALL THE REQUIRED ROLES AND FEATURES WITH POWERSHELL.**
-
-Run this `Install-WindowsFeature` command to install the required roles and features from PowerShell:
-
-   ```bash
-   Install-WindowsFeature -Name "BitLocker", "Data-Center-Bridging", "Failover-Clustering", "FS-FileServer", "FS-Data-Deduplication", "Hyper-V", "Hyper-V-PowerShell", "RSAT-AD-Powershell", "RSAT-Clustering-PowerShell", "NetworkATC", "Storage-Replica" -IncludeAllSubFeature -IncludeManagementTools
-   ```
-<br></br>
-## **STEP 4. CREATE AN AZURE STACK HCI CLUSTER WITH POWERSHELL.**
-
-Run this `New-Cluster` command to create an Azure Stack HCI cluster from PowerShell:
-   ```bash
-   New-Cluster -Name <cluster-name> -Node <node-name> -NOSTORAGE -StaticAddress <ipaddress>
-   ```
-
-Here's the command that I ran from PowerShell:   
-   ```bash
-   New-Cluster -Name AZSHCI-cluster -Node AZSHCI -NOSTORAGE -StaticAddress 192.168.2.183
-   ```
-   
-<br></br>
-## **STEP 5. REGISTER THE CLUSTER WITH POWERSHELL [OR WINDOWS ADMIN CENTER].**
-
-Run these `Install-Module` and `Register-AzStackHCI` commands from PowerShell:
-   ```bash
-   Install-Module -Name Az.StackHCI
-   
-   Register-AzStackHCI  -SubscriptionId "<subscription_ID>" -ResourceGroupName <resourcegroup>
-   ```
-<br></br>
-## **STEP 6. CREATE VOLUMES WITH POWERSHELL.**
-
-Run this `New-Volume` command to create a volume from PowerShell:
-   ```bash
-   New-Volume -FriendlyName "S2D on AZSHCI-cluster" -Size 1TB -ProvisioningType Thin
-   ```
-<br></br>
-## **STEP 7. GENERATE DISCOVERY ISO FROM THE ASSISTED INSTALLER:**
+## **STEP 1. GENERATE DISCOVERY ISO FROM THE ASSISTED INSTALLER:**
 
 **a. Open the OpenShift Assisted Installer from the [_Red Hat Hybrid Cloud Console_](https://console.redhat.com/openshift/assisted-installer/clusters/):** 
  - You will be prompted for your `Red Hat ID` and `password` to login.
@@ -137,7 +85,7 @@ Save this ISO file for use in a later step, when creating the Virtual Machine fo
 **h. Click '_Close_' to return to the previous screen.**
 
 <br></br>
-## **STEP 8. FROM WINDOWS ADMIN CENTER, CREATE A VIRTUAL MACHINE FOR SINGLE NODE OPENSHIFT**
+## **STEP 2. FROM WINDOWS ADMIN CENTER, CREATE A VIRTUAL MACHINE FOR SINGLE NODE OPENSHIFT**
 
 Install **Windows Admin Center**, which is the web-based management interface to manage Azure Stack HCI. You can install it onto a management PC, a Windows Server, or you may use it from the Azure Portal. For more information on installing and using Windows Admin Center in your environment, see the following:
  - [_Get started with Azure Stack HCI and Windows Admin Center_](https://learn.microsoft.com/en-us/azure-stack/hci/get-started)
@@ -177,7 +125,7 @@ The minimum resource requirements for Single-Node OpenShift are **CPU**: 8 vCPUs
 This will allow you to boot from the Discovery ISO image, without it having a signed hash.  For more information see [_Generation 2 virtual machine security settings for Hyper-V_](https://learn.microsoft.com/en-us/windows-server/virtualization/hyper-v/learn-more/generation-2-virtual-machine-security-settings-for-hyper-v).
 
 <br></br>
-## **STEP 9. BOOT THE VIRTUAL MACHINE FROM THE DISCOVERY ISO:**
+## **STEP 3. BOOT THE VIRTUAL MACHINE FROM THE DISCOVERY ISO:**
 
 **a. From _Virtual Machines_, select the VM and then '_Power_, _Start_'.**
 
@@ -188,7 +136,7 @@ This will allow you to boot from the Discovery ISO image, without it having a si
 <p align="center"><img width="500" alt="image" src="https://user-images.githubusercontent.com/48925593/192855462-8d72d335-a40d-4722-bbc3-a99415e3fdbb.png"></p>
 
 <br></br>
-## **STEP 10. RETURN TO THE ASSISTED INSTALLER TO FINISH THE INSTALLATION:**
+## **STEP 4. RETURN TO THE ASSISTED INSTALLER TO FINISH THE INSTALLATION:**
 
 Return to the OpenShift Assisted Installer.
  
