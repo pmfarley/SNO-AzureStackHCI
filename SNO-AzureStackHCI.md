@@ -135,11 +135,11 @@ Return to the OpenShift Assisted Installer.
  **a. You should see the SNO VM displayed in the list of discovered servers. 
       From the "_Host discovery_" menu, once the SNO VM is discovered, click "_Next_".**
  
-<p align="center"><img width="800" alt="image" src="step_10a.png"></p>
+<p align="center"><img width="800" alt="image" src="step_4a.png"></p>
 
  **b. From the "_Storage_" menu, click on "_Next_" to proceed.**
  
-<p align="center"><img width="800" alt="image" src="step_10b.png"></p>
+<p align="center"><img width="800" alt="image" src="step_4b.png"></p>
 
  **c. From the "_Networking_" menu, confirm the discovered/selected "machine network", and click on "_Next_" to proceed.**
 
