@@ -143,11 +143,11 @@ Return to the OpenShift Assisted Installer.
 
  **c. From the "_Networking_" menu, confirm the discovered/selected "machine network", and click on "_Next_" to proceed.**
 
-<p align="center"><img width="800" alt="image" src="step_10c.png"></p>
+<p align="center"><img width="800" alt="image" src="step_4c.png"></p>
 
 **d. Review the configuration, and click on "_Install Cluster_".**
 
-<p align="center"><img width="800" alt="image" src="step_10d.png"></p>
+<p align="center"><img width="800" alt="image" src="step_4d.png"></p>
 
 **e. Monitor the installation progress.**
 
