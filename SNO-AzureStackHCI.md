@@ -125,7 +125,7 @@ This will allow you to boot from the Discovery ISO image, without it having a si
 
  - **b. To connect to the VM console to watch it during boot, select the VM and then "_Connect_, _Connect_".**
 
-<p align="center"><img width="350" alt="image" src="step_3b.png"></p>
+<p align="center"><img width="300" alt="image" src="step_3b.png"></p>
 
 <br></br>
 ## **STEP 4. RETURN TO THE ASSISTED INSTALLER TO FINISH THE INSTALLATION:**
