@@ -18,6 +18,7 @@ For more information, see the [Persistent storage using logical volume manager s
 You will also need to create DNS records for the API and Ingress VIP addresses on your DNS server:
  - A DNS A/AAAA record for `api.<cluster_name>.<base_domain>`.
  - A DNS A/AAAA record with a wildcard for `*.apps.<cluster_name>.<base_domain>`.
+
 With SNO, a single IP address is used for both of these records.  The Assisted Installer defaults to using DHCP networking. During the installation, after booting the VM with the discovery ISO, you will be able to view the IP address that was allocated. The Assisted Installer can also be configured to use static IP addressing.
 
 For more information, see the [Networking requirements](https://access.redhat.com/documentation/en-us/assisted_installer_for_openshift_container_platform/2022/html-single/assisted_installer_for_openshift_container_platform/index#networking) in the Assisted Installer documentation.
