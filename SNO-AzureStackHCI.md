@@ -151,9 +151,9 @@ Return to the OpenShift Assisted Installer.
 
 **e. Monitor the installation progress.**
 
-<p align="center"><img width="800" alt="image" src="step_10e1.png"></p>
+<p align="center"><img width="800" alt="image" src="step_4e1.png"></p>
 
-<p align="center"><img width="800" alt="image" src="step_10e2.png"></p>
+<p align="center"><img width="800" alt="image" src="step_4e2.png"></p>
 
 **f. Installation Complete.**
 
