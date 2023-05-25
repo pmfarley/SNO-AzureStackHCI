@@ -33,37 +33,37 @@ The following diagram shows the HPE GreenLake for Microsoft Azure Stack HCI envi
 ## **STEP 1. GENERATE DISCOVERY ISO FROM THE ASSISTED INSTALLER:**
 
 Perform the following steps to install Single Node OpenShift (SNO) onto HPE GreenLake for Azure Stack HCI:
-
-   a. **Open the OpenShift Assisted Installer from the [_Red Hat Hybrid Cloud Console_](https://console.redhat.com/openshift/assisted-installer/clusters/):** 
+ 
+ - **a. Open the OpenShift Assisted Installer from the [_Red Hat Hybrid Cloud Console_](https://console.redhat.com/openshift/assisted-installer/clusters/):** 
    - You will be prompted for your `Red Hat ID` and `password` to login.
 
-   b. **Select "_Create New Cluster_".**
+ - **b. Select "_Create New Cluster_".**
 
-<p align="center"><img width="800" alt="image" src="step_7b.png"></p>
+<p align="center"><img width="800" alt="image" src="step_1b.png"></p>
 
-   c. **From the "_Cluster details_" step, enter the cluster name, the base domain; then select "_OpenShift 4.13.0_" and "_Install single node OpenShift (SNO)_", and click "_Next_".**
+ - **c. From the "_Cluster details_" step, enter the cluster name, the base domain; then select "_OpenShift 4.13.0_" and "_Install single node OpenShift (SNO)_", and click "_Next_".**
 
-<p align="center"><img width="800" alt="image" src="step_7c.png"></p>
+<p align="center"><img width="800" alt="image" src="step_1c.png"></p>
 
-   d. **On the "_Operators_" step, select "_Install Logical Volume Manager Storage_" and click "_Next_".**
+ - **d. On the "_Operators_" step, select "_Install Logical Volume Manager Storage_" and click "_Next_".**
 
-<p align="center"><img width="800" alt="image" src="step_7dd.png"></p>
+<p align="center"><img width="800" alt="image" src="step_1d.png"></p>
 
-   e. **On the "_Host discovery_" step, select "_Add host_".**
+ - **e. On the "_Host discovery_" step, select "_Add host_".**
 
-<p align="center"><img width="800" alt="image" src="step_7e.png"></p>
+<p align="center"><img width="800" alt="image" src="step_1e.png"></p>
 
-   f. **Select "_Minimal Image File_" and "_Generate Discovery ISO_".**
+ - **f. Select "_Minimal Image File_" and "_Generate Discovery ISO_".**
 
-<p align="center"><img width="500" alt="image" src="step_7f.png"></p>
+<p align="center"><img width="500" alt="image" src="step_1f.png"></p>
 
-   g. **Click on the "_Download Discovery ISO_" button.**
+ - **g. Click on the "_Download Discovery ISO_" button.**
 
 Save this ISO file for use in a later step, when creating the Virtual Machine for SNO.
 
-<p align="center"><img width="500" alt="image" src="step_7g.png"></p>
+<p align="center"><img width="500" alt="image" src="step_1g.png"></p>
 
-   h. **Click "_Close_" to return to the previous screen.**
+ - **h. Click "_Close_" to return to the previous screen.**
 
 <br></br>
 ## **STEP 2. FROM WINDOWS ADMIN CENTER, CREATE A VIRTUAL MACHINE FOR SINGLE NODE OPENSHIFT**
