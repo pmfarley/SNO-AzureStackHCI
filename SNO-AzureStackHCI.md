@@ -3,18 +3,26 @@ Within this blog, I will provide the process for installing Single Node OpenShif
 The combination of Single Node OpenShift running on a Azure Stack HCI provides a suitable platform for running edge and hybrid cloud workloads.  
 
 ## **SINGLE NODE OPENSHIFT REQUIREMENTS:**
-Single-Node OpenShift has the following [minimum resource requirements](https://docs.openshift.com/container-platform/4.11/installing/installing_sno/install-sno-preparing-to-install-sno.html#install-sno-requirements-for-installing-on-a-single-node_install-sno-preparing):
+Single Node OpenShift has the following [minimum resource requirements](https://docs.openshift.com/container-platform/4.11/installing/installing_sno/install-sno-preparing-to-install-sno.html#install-sno-requirements-for-installing-on-a-single-node_install-sno-preparing):
  - **CPU**: 8 vCPU cores
  - **Memory**: 16 GB of RAM
  - **Storage**: 120 GB 
 
-In addition, the Assisted Installer can install the _Logical Volume Manager Storage operator_ to manage persistent storage for OpenShift. Additional requirements for the LVM Storage operator are:
+In addition, the Assisted Installer can install the _Logical Volume Manager Storage operator_ to manage persistent storage for Single Node OpenShift. Additional requirements for the LVM Storage operator are:
  - **CPU**: 1 vCPU cores
  - **Memory**: 400 MiB of RAM
  - **Storage**: 1 additional installation disk (empty) 
 
 For more information, see the [Persistent storage using logical volume manager storage documentation](https://docs.openshift.com/container-platform/4.13/storage/persistent_storage/persistent_storage_local/persistent-storage-using-lvms.html).
 
+You will also need to create DNS records for the API and Ingress VIP addresses on your DNS server:
+ - A DNS A/AAAA record for `api.<cluster_name>.<base_domain>`.
+ - A DNS A/AAAA record with a wildcard for `*.apps.<cluster_name>.<base_domain>`.
+With SNO, a single IP address is used for both of these records.  The Assisted Installer defaults to using DHCP networking. During the installation, after booting the VM with the discovery ISO, you will be able to view the IP address that was allocated. The Assisted Installer can also be configured to use static IP addressing.
+
+For more information, see the [Networking requirements](https://access.redhat.com/documentation/en-us/assisted_installer_for_openshift_container_platform/2022/html-single/assisted_installer_for_openshift_container_platform/index#networking) in the Assisted Installer documentation.
+
+Besides Single Node OpenShift, the Assisted Installer is also capable of installing OpenShift clusters using additional configurations, such as a 3-node compact cluster, or a multiple control-plane, and worker node cluster. 
 To learn more about using the Assisted Installer, see the [Assisted Installer for OpenShift Container Platform documentation](https://access.redhat.com/documentation/en-us/assisted_installer_for_openshift_container_platform/2022/html-single/assisted_installer_for_openshift_container_platform/index) for details.
 
 ## **HPE GREENLAKE FOR MICROSOFT AZURE STACK HCI**
@@ -75,11 +83,15 @@ Save this ISO file for use in a later step, when creating the Virtual Machine fo
  - [_Manage Azure Stack HCI clusters using Windows Admin Center in Azure (preview)_](https://learn.microsoft.com/en-us/windows-server/manage/windows-admin-center/azure/manage-hci-clusters)
  - [_Manage VMs with Windows Admin Center_](https://learn.microsoft.com/en-us/azure-stack/hci/manage/vm)
 
+   We will create a virtual machine to be used for Single-Node OpenShift, based on the minimum resource requirements with the LVM Storage operator:
+ - **CPU**: 9 vCPUs
+ - **Memory**: 16 GB
+ - **Storage**: 120 GB (for RHEL CoreOS operating system)
+ - **Storage**: 100 GB (for OpenShift persistent storage using the LVM Storage operator)
+
  - **a. From Windows Admin Center, navigate to "Virtual Machines", select "_Add_, _+New_".**
 
 <p align="center"><img width="800" alt="image" src="step_2a.png"></p>
-
-   The minimum resource requirements for Single-Node OpenShift with the LVM Storage operator are **CPU**: 9 vCPUs, **Memory**: 16 GB, **Storage**: 120 GB 
 
  - **b. Enter the Virtual Machine Name.**
 
@@ -105,10 +117,10 @@ Save this ISO file for use in a later step, when creating the Virtual Machine fo
 
    **In the "_Operating System_" category, select "Install an operating system from an image file (.iso)", and click on the "_Browse_" button to select the Discovery ISO file.**
    
-   **When complete, select "_Create_".**
-   
-   **NOTE:** You will have to transfer the Discovery ISO file from where you downloaded it earlier, to the Azure Stack HCI Cluster Storage Shared Volume.
+   **NOTE:** You will have to transfer the Discovery ISO file from the location you downloaded it earlier, to the _Azure Stack HCI Cluster Storage Shared Volume_.
 
+   **When complete, select "_Create_".**   
+   
 <p align="center"><img width="500" alt="image" src="step_2f.png"></p>
 
 
