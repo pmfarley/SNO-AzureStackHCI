@@ -160,7 +160,7 @@ Return to the OpenShift Assisted Installer.
 Upon completion, you'll see the summary of the installation, and you'll be able to _download the kubeconfig file_, 
 _copy the kubeadmin password_, and _launch the OpenShift Web console_.
 
-<p align="center"><img width="800" alt="image" src="step_10f.png"></p>
+<p align="center"><img width="800" alt="image" src="step_4f.png"></p>
 
 If you have problems accessing the OpenShift Web Console, the installation summary screen also provides some troubleshooting tips to check your DNS server or local configuration to resolve its hostname.  You can add/confirm the API and Ingress VIP addresses to your DNS server, or you can update your local `/etc/hosts` or `/etc/resolv.conf` files.  Click on **_Not able to access the Web Console?_**, to access these troubleshooting tips.
 <br></br>
