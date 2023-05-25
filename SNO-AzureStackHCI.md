@@ -73,33 +73,33 @@ Save this ISO file for use in a later step, when creating the Virtual Machine fo
  - [_Manage Azure Stack HCI clusters using Windows Admin Center in Azure (preview)_](https://learn.microsoft.com/en-us/windows-server/manage/windows-admin-center/azure/manage-hci-clusters)
  - [_Manage VMs with Windows Admin Center_](https://learn.microsoft.com/en-us/azure-stack/hci/manage/vm)
 
-   **a. From Windows Admin Center, navigate to "Virtual Machines", select "_Add_, _+New_".**
+ - **a. From Windows Admin Center, navigate to "Virtual Machines", select "_Add_, _+New_".**
 
 <p align="center"><img width="800" alt="image" src="step_2a.png"></p>
 
    The minimum resource requirements for Single-Node OpenShift with the LVM Storage operator are **CPU**: 9 vCPUs, **Memory**: 16 GB, **Storage**: 120 GB 
 
-   **b. Enter the Virtual Machine Name.**
+ - **b. Enter the Virtual Machine Name.**
 
 <p align="center"><img width="500" alt="image" src="step_2b.png"></p>
 
-   **c. Continue, scrolling down, enter the Virtual processors and Memory settings.**
+ - **c. Continue, scrolling down, enter the Virtual processors and Memory settings.**
 
 <p align="center"><img width="500" alt="image" src="step_2c.png"></p>
 
-   **d. Continue, scrolling down, selecting the Network virtual switch for your environment.**
+ - **d. Continue, scrolling down, selecting the Network virtual switch for your environment.**
 
    **Then, click on "_+ Add_" under Storage to create new disk 1, continuing below.**
 
 <p align="center"><img width="500" alt="image" src="step_2d.png"></p>
 
-   **e. Continue, by creating an empty virtual hard disk of at least 120GB for disk 1.**
+ - **e. Continue, by creating an empty virtual hard disk of at least 120GB for disk 1.**
 
    **Then, click on "_+ Add_" to create new disk 2, continuing below.**
 
 <p align="center"><img width="500" alt="image" src="step_2e.png"></p>
 
-   **f. Continue, by creating an empty virtual hard disk of at least 100GB for disk 2.**
+ - **f. Continue, by creating an empty virtual hard disk of at least 100GB for disk 2.**
 
    **In the "_Operating System_" category, select "Install an operating system from an image file (.iso)", and click on the "_Browse_" button to select the Discovery ISO file.**
    
@@ -110,7 +110,7 @@ Save this ISO file for use in a later step, when creating the Virtual Machine fo
 <p align="center"><img width="500" alt="image" src="step_2f.png"></p>
 
 
-   **g. Continue by editing the settings for the VM. Click on "_Settings_" (the gear icon), then under the _Security_ category, uncheck "_Enable Secure Boot_". Select "_Save Security Settings_", then click "_Close_".**
+ - **g. Continue by editing the settings for the VM. Click on "_Settings_" (the gear icon), then under the _Security_ category, uncheck "_Enable Secure Boot_". Select "_Save Security Settings_", then click "_Close_".**
 
 <p align="center"><img width="800" alt="image" src="step_2g.png"></p>
 
@@ -119,11 +119,11 @@ This will allow you to boot from the Discovery ISO image, without it having a si
 <br></br>
 ## **STEP 3. BOOT THE VIRTUAL MACHINE FROM THE DISCOVERY ISO:**
 
-**a. From _Virtual Machines_, select the VM and then "_Power_, _Start_".**
+ - **a. From _Virtual Machines_, select the VM and then "_Power_, _Start_".**
 
 <p align="center"><img width="500" alt="image" src="https://user-images.githubusercontent.com/48925593/192850501-e5c64a10-8fb3-4b11-942e-d4da35f0b1f4.png"></p>
 
-**b. To connect to the VM console to watch it during boot, select the VM and then "_Connect_, _Connect_".**
+ - **b. To connect to the VM console to watch it during boot, select the VM and then "_Connect_, _Connect_".**
 
 <p align="center"><img width="500" alt="image" src="https://user-images.githubusercontent.com/48925593/192855462-8d72d335-a40d-4722-bbc3-a99415e3fdbb.png"></p>
 
@@ -132,30 +132,30 @@ This will allow you to boot from the Discovery ISO image, without it having a si
 
 Return to the OpenShift Assisted Installer.
  
- **a. You should see the SNO VM displayed in the list of discovered servers. 
+ - **a. You should see the SNO VM displayed in the list of discovered servers. 
       From the "_Host discovery_" menu, once the SNO VM is discovered, click "_Next_".**
  
 <p align="center"><img width="800" alt="image" src="step_4a.png"></p>
 
- **b. From the "_Storage_" menu, click on "_Next_" to proceed.**
+ - **b. From the "_Storage_" menu, click on "_Next_" to proceed.**
  
 <p align="center"><img width="800" alt="image" src="step_4b.png"></p>
 
- **c. From the "_Networking_" menu, confirm the discovered/selected "machine network", and click on "_Next_" to proceed.**
+ - **c. From the "_Networking_" menu, confirm the discovered/selected "machine network", and click on "_Next_" to proceed.**
 
 <p align="center"><img width="800" alt="image" src="step_4c.png"></p>
 
-**d. Review the configuration, and click on "_Install Cluster_".**
+ - **d. Review the configuration, and click on "_Install Cluster_".**
 
 <p align="center"><img width="800" alt="image" src="step_4d.png"></p>
 
-**e. Monitor the installation progress.**
+ - **e. Monitor the installation progress.**
 
 <p align="center"><img width="800" alt="image" src="step_4e1.png"></p>
 
 <p align="center"><img width="800" alt="image" src="step_4e2.png"></p>
 
-**f. Installation Complete.**
+ - **f. Installation Complete.**
 
 Upon completion, you'll see the summary of the installation, and you'll be able to _download the kubeconfig file_, 
 _copy the kubeadmin password_, and _launch the OpenShift Web console_.
