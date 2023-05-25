@@ -121,11 +121,11 @@ This will allow you to boot from the Discovery ISO image, without it having a si
 
  - **a. From _Virtual Machines_, select the VM and then "_Power_, _Start_".**
 
-<p align="center"><img width="400" alt="image" src="https://user-images.githubusercontent.com/48925593/192850501-e5c64a10-8fb3-4b11-942e-d4da35f0b1f4.png"></p>
+<p align="center"><img width="400" alt="image" src="step_3a.png"></p>
 
  - **b. To connect to the VM console to watch it during boot, select the VM and then "_Connect_, _Connect_".**
 
-<p align="center"><img width="400" alt="image" src="https://user-images.githubusercontent.com/48925593/192855462-8d72d335-a40d-4722-bbc3-a99415e3fdbb.png"></p>
+<p align="center"><img width="350" alt="image" src="step_3b.png"></p>
 
 <br></br>
 ## **STEP 4. RETURN TO THE ASSISTED INSTALLER TO FINISH THE INSTALLATION:**
