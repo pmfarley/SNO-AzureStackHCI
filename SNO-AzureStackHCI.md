@@ -77,7 +77,7 @@ Save this ISO file for use in a later step, when creating the Virtual Machine fo
 
 <p align="center"><img width="800" alt="image" src="step_2a.png"></p>
 
-The minimum resource requirements for Single-Node OpenShift with the LVM Storage operator are **CPU**: 9 vCPUs, **Memory**: 16 GB, **Storage**: 120 GB 
+   The minimum resource requirements for Single-Node OpenShift with the LVM Storage operator are **CPU**: 9 vCPUs, **Memory**: 16 GB, **Storage**: 120 GB 
 
    **b. Enter the Virtual Machine Name.**
 
