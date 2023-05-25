@@ -112,7 +112,7 @@ Save this ISO file for use in a later step, when creating the Virtual Machine fo
 
    **g. Continue by editing the settings for the VM. Click on "_Settings_" (the gear icon), then under the _Security_ category, uncheck "_Enable Secure Boot_". Select "_Save Security Settings_", then click "_Close_".**
 
-<p align="center"><img width="800" alt="image" src="https://user-images.githubusercontent.com/48925593/192849753-1f984931-1b11-4a58-a605-bc81477dbf67.png"></p>
+<p align="center"><img width="800" alt="image" src="step_2g.png"></p>
 
 This will allow you to boot from the Discovery ISO image, without it having a signed hash.  For more information see [_Generation 2 virtual machine security settings for Hyper-V_](https://learn.microsoft.com/en-us/windows-server/virtualization/hyper-v/learn-more/generation-2-virtual-machine-security-settings-for-hyper-v).
 
