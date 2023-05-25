@@ -18,12 +18,14 @@ For more information, see the [Persistent storage using logical volume manager s
 To learn more about using the Assisted Installer, see the [Assisted Installer for OpenShift Container Platform documentation](https://access.redhat.com/documentation/en-us/assisted_installer_for_openshift_container_platform/2022/html-single/assisted_installer_for_openshift_container_platform/index) for details.
 
 ## **HPE GREENLAKE FOR MICROSOFT AZURE STACK HCI**
-Get reliable solid performance and high availability for HCI—all through a pay-per-use model, using native Azure experience and capabilities. HPE GreenLake for Microsoft Azure Stack HCI features a choice of ready-to-go validated solution configurations, based on specific HPE technologies that are tested, optimized, and validated with Azure Stack HCI OS. 
+HPE GreenLake for Microsoft Azure Stack HCI provides a pay-per-use model, using a native Azure experience and capabilities. It features a choice of ready-to-go validated solution configurations, based on specific HPE technologies that are tested, optimized, and validated with Azure Stack HCI OS. 
  - **Integrated system**: HW, SW and services solution delivered as-a-service and with a pay-as-you-go model.
  - **Monthly billing** from HPE based on consumption of compute and storage resources.
  - **Single bill** can include all charges--including AzureStack HCI, Azure Services (backup, etc), with HPE as the CSP. 
 
 For additional details, see the [HPE GreenLake for Microsoft Azure Stack HCI solution brief](https://www.hpe.com/psnow/doc/a50003801enw.pdf?jumpid=in_pdfviewer-psnow).
+
+   **NOTE:** At the time of this blog, Red Hat OpenShift Container Platfoirm running on _HPE GreenLake for Microsoft Azure Stack HCI_ does not currently utilize a pay-as-you-go based subscription.  It would utilize a traditional subscription for Red Hat OpenShift.
 
 The following diagram shows the HPE GreenLake for Microsoft Azure Stack HCI environment used for this installation of Red Hat OpenShift:
 
