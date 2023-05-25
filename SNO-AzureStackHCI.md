@@ -1,5 +1,5 @@
 # Single Node OpenShift on HPE GreenLake for Azure Stack HCI 
-Within this blog, I will provide the process for installing Single Node OpenShift (SNO) onto HPE GreenLake for Azure Stack HCI, using the OpenShift Assisted-Installer.
+Within this blog, I will provide the process for installing Single Node OpenShift (SNO) onto HPE GreenLake for Azure Stack HCI, using the OpenShift Assisted Installer.
 The combination of Single Node OpenShift running on a Azure Stack HCI provides a suitable platform for running edge and hybrid cloud workloads.  
 
 ## **SINGLE NODE OPENSHIFT REQUIREMENTS:**
