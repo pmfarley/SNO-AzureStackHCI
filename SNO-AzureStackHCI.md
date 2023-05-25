@@ -105,7 +105,7 @@ Save this ISO file for use in a later step, when creating the Virtual Machine fo
    
    **When complete, select "_Create_".**
    
-   **NOTE:** You will have to transfer the Discovery ISO file from where you downloaded it earlier, to the Azure Stack HCI server.
+   **NOTE:** You will have to transfer the Discovery ISO file from where you downloaded it earlier, to the Azure Stack HCI Cluster Storage Shared Volume.
 
 <p align="center"><img width="500" alt="image" src="step_2f.png"></p>
 
