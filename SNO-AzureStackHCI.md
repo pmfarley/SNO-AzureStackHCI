@@ -6,14 +6,40 @@ The combination of Single Node OpenShift running on a Azure Stack HCI provides a
 Single Node OpenShift has the following [minimum resource requirements](https://docs.openshift.com/container-platform/4.11/installing/installing_sno/install-sno-preparing-to-install-sno.html#install-sno-requirements-for-installing-on-a-single-node_install-sno-preparing):
  - **CPU**: 8 vCPU cores
  - **Memory**: 16 GB of RAM
- - **Storage**: 120 GB 
+ - **Storage**: 120 GB (operating system disk)
 
-In addition, the Assisted Installer can install the _Logical Volume Manager Storage operator_ to manage persistent storage for Single Node OpenShift. Additional requirements for the LVM Storage operator are:
- - **CPU**: 1 vCPU cores
- - **Memory**: 400 MiB of RAM
- - **Storage**: 1 additional installation disk (empty) 
+Besides Single Node OpenShift, the Assisted Installer is also capable of installing OpenShift clusters using additional configurations, such as a 3-node compact cluster, or a multiple control-plane, and worker node cluster. 
 
-For more information, see the [Persistent storage using logical volume manager storage documentation](https://docs.openshift.com/container-platform/4.13/storage/persistent_storage/persistent_storage_local/persistent-storage-using-lvms.html).
+To learn more about using the Assisted Installer, see the [Assisted Installer for OpenShift Container Platform documentation](https://access.redhat.com/documentation/en-us/assisted_installer_for_openshift_container_platform/2022/html-single/assisted_installer_for_openshift_container_platform/index) for details.
+
+**PERSISTENT STORAGE INTEGRATION WITH AZURE STACK HCI**
+
+There are two solutions provided here, to integrate the persistent storage for the OpenShift cluster to the shared HCI storage volume(s) provided from the Microsoft Azure Stack HCI cluster.  This is done by providing additional local disk device(s) from the shared volume within the host virtual machine(s) (VMs) used for OpenShift.  This varies based on whether OpenShift is configured to run on a single node (single VM), or on multiple nodes (multiple VMs).
+
+ - **Single Node OpenShift:** Logical Volume Manager Storage operator
+
+   Since SNO runs in a single host VM, an additional local disk device is added to the VM, which is then used by the Logical Volume Manager Storage operator to provide persistent storage for the OpenShift cluster.
+   
+   The Assisted Installer can install the _Logical Volume Manager Storage operator_ to manage persistent storage for SNO. The additional requirements for the LVM Storage operator are:
+    - **CPU**: 1 vCPU cores
+    - **Memory**: 400 MiB of RAM
+    - **Storage**: 1 additional non-installation disk (empty) 
+
+   For more information, see the [Persistent storage using logical volume manager storage documentation](https://docs.openshift.com/container-platform/4.13/storage/persistent_storage/persistent_storage_local/persistent-storage-using-lvms.html).
+   
+ - **Multi-Node OpenShift:** OpenShift Data Foundation (ODF)
+
+   ODF is setup to run in Internal mode, across a minimum of three nodes within the cluster.  So, three of the host VMs are setup with an additional local disk device, to be used by ODF to provide persistent storage for the OpenShift cluster. 
+   
+   The Assisted Installer can install the _OpenShift Data Foundation_ operators to manage persistent storage for OpenShift. The additional requirements for ODF per host VM node are:
+    - **CPU:** 6 vCPU cores (for 3-node OpenShift), or 8 vCPU cores (for standard OpenShift)
+    - **Memory:** 19 GiB of RAM
+    - **Storage:** 1 non-installation disk of at least 25GB (empty) 
+    - **Additional:** 2 CPU cores and 5GiB RAM per storage disk 
+
+For more information, see the [Deployment Planning Guide for Red Hat OpenShift Data Foundation 4.12](https://access.redhat.com/documentation/en-us/red_hat_openshift_data_foundation/4.12/html-single/planning_your_deployment/index).
+
+**NETWORKING REQUIREMENTS**
 
 You will also need to create DNS records for the API and Ingress VIP addresses on your DNS server:
  - A DNS A/AAAA record for `api.<cluster_name>.<base_domain>`.
@@ -22,9 +48,6 @@ You will also need to create DNS records for the API and Ingress VIP addresses o
 With SNO, a single IP address is used for both of these records.  The Assisted Installer defaults to using DHCP networking. During the installation, after booting the VM with the discovery ISO, you will be able to view the IP address that was allocated. The Assisted Installer can also be configured to use static IP addressing.
 
 For more information, see the [Networking requirements](https://access.redhat.com/documentation/en-us/assisted_installer_for_openshift_container_platform/2022/html-single/assisted_installer_for_openshift_container_platform/index#networking) in the Assisted Installer documentation.
-
-Besides Single Node OpenShift, the Assisted Installer is also capable of installing OpenShift clusters using additional configurations, such as a 3-node compact cluster, or a multiple control-plane, and worker node cluster. 
-To learn more about using the Assisted Installer, see the [Assisted Installer for OpenShift Container Platform documentation](https://access.redhat.com/documentation/en-us/assisted_installer_for_openshift_container_platform/2022/html-single/assisted_installer_for_openshift_container_platform/index) for details.
 
 ## **HPE GREENLAKE FOR MICROSOFT AZURE STACK HCI**
 HPE GreenLake for Microsoft Azure Stack HCI provides a pay-per-use model, using a native Azure experience and capabilities. It features a choice of ready-to-go validated solution configurations, based on specific HPE technologies that are tested, optimized, and validated with Azure Stack HCI OS. 
