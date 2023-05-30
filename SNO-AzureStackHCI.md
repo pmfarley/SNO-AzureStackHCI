@@ -11,6 +11,7 @@ Single Node OpenShift has the following [minimum resource requirements](https://
 Besides Single Node OpenShift, the Assisted Installer is also capable of installing OpenShift clusters using additional configurations, such as a 3-node compact cluster, or a multiple control-plane, and worker node cluster. 
 
 To learn more about using the Assisted Installer, see the [Assisted Installer for OpenShift Container Platform documentation](https://access.redhat.com/documentation/en-us/assisted_installer_for_openshift_container_platform/2022/html-single/assisted_installer_for_openshift_container_platform/index) for details.
+<br></br>
 
 **PERSISTENT STORAGE INTEGRATION WITH AZURE STACK HCI**
 
@@ -39,6 +40,9 @@ There are two solutions provided here, to integrate the persistent storage for t
 
 For more information, see the [Deployment Planning Guide for Red Hat OpenShift Data Foundation 4.12](https://access.redhat.com/documentation/en-us/red_hat_openshift_data_foundation/4.12/html-single/planning_your_deployment/index).
 
+**NOTE:** This blog shows the process to install _Single Node OpenShift_ on Azure Stack HCI, so the _Logical Volume Manager Storage operator_ will be used for persistent storage.
+<br></br>
+
 **NETWORKING REQUIREMENTS**
 
 You will also need to create DNS records for the API and Ingress VIP addresses on your DNS server:
@@ -49,6 +53,7 @@ With SNO, a single IP address is used for both of these records.  The Assisted I
 
 For more information, see the [Networking requirements](https://access.redhat.com/documentation/en-us/assisted_installer_for_openshift_container_platform/2022/html-single/assisted_installer_for_openshift_container_platform/index#networking) in the Assisted Installer documentation.
 
+<br></br>
 ## **HPE GREENLAKE FOR MICROSOFT AZURE STACK HCI**
 HPE GreenLake for Microsoft Azure Stack HCI provides a pay-per-use model, using a native Azure experience and capabilities. It features a choice of ready-to-go validated solution configurations, based on specific HPE technologies that are tested, optimized, and validated with Azure Stack HCI OS. 
  - **Integrated system**: HW, SW and services solution delivered as-a-service and with a pay-as-you-go model.
