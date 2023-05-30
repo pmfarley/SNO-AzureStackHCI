@@ -16,7 +16,7 @@ To learn more about using the Assisted Installer, see the [Assisted Installer fo
 
 There are two solutions provided here, to integrate the persistent storage for the OpenShift cluster to the shared HCI storage volume(s) provided from the Microsoft Azure Stack HCI cluster.  This is done by providing additional local disk device(s) from the shared volume within the host virtual machine(s) (VMs) used for OpenShift.  This varies based on whether OpenShift is configured to run on a single node (single VM), or on multiple nodes (multiple VMs).
 
- - **Single Node OpenShift:** Logical Volume Manager Storage operator
+ - **Single Node OpenShift:** _Logical Volume Manager Storage operator_
 
    Since SNO runs in a single host VM, an additional local disk device is added to the VM, which is then used by the Logical Volume Manager Storage operator to provide persistent storage for the OpenShift cluster.
    
@@ -27,7 +27,7 @@ There are two solutions provided here, to integrate the persistent storage for t
 
    For more information, see the [Persistent storage using logical volume manager storage documentation](https://docs.openshift.com/container-platform/4.13/storage/persistent_storage/persistent_storage_local/persistent-storage-using-lvms.html).
    
- - **Multi-Node OpenShift:** OpenShift Data Foundation (ODF)
+ - **Multi-Node OpenShift:** [_Red Hat OpenShift Data Foundation (ODF)_](https://www.redhat.com/en/resources/openshift-data-foundation-datasheet)
 
    ODF is setup to run in Internal mode, across a minimum of three nodes within the cluster.  So, three of the host VMs are setup with an additional local disk device, to be used by ODF to provide persistent storage for the OpenShift cluster. 
    
