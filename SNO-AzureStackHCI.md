@@ -28,9 +28,9 @@ There are two solutions provided here, to integrate the persistent storage for t
 
    For more information, see the [Persistent storage using logical volume manager storage documentation](https://docs.openshift.com/container-platform/4.13/storage/persistent_storage/persistent_storage_local/persistent-storage-using-lvms.html).
    
- - **Multi-Node OpenShift:** [_Red Hat OpenShift Data Foundation (ODF)_](https://www.redhat.com/en/resources/openshift-data-foundation-datasheet)
+ - **Multi-Node OpenShift:** _Red Hat OpenShift Data Foundation (ODF)_
 
-   ODF is setup to run in Internal mode, across a minimum of three nodes within the cluster.  So, three of the host VMs are setup with an additional local disk device, to be used by ODF to provide persistent storage for the OpenShift cluster. 
+   [OpenShift Data Foundation](https://www.redhat.com/en/resources/openshift-data-foundation-datasheet) is setup to run in Internal mode, across a minimum of three nodes within the cluster.  So, three of the host VMs are setup with an additional local disk device, to be used by ODF to provide persistent storage for the OpenShift cluster. 
    
    The Assisted Installer can install the _OpenShift Data Foundation_ operators to manage persistent storage for OpenShift. The additional requirements for ODF per host VM node are:
     - **CPU:** 6 vCPU cores (for 3-node OpenShift), or 8 vCPU cores (for standard OpenShift)
