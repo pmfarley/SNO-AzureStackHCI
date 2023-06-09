@@ -71,16 +71,16 @@ The following diagram shows the HPE GreenLake for Microsoft Azure Stack HCI envi
 
 ## **STEP 1. GENERATE DISCOVERY ISO FROM THE ASSISTED INSTALLER:**
 
-Perform the following steps to install Single Node OpenShift (SNO) onto HPE GreenLake for Azure Stack HCI:
+#. Perform the following steps to install Single Node OpenShift (SNO) onto HPE GreenLake for Azure Stack HCI:
  
- - **a. Open the OpenShift Assisted Installer from the [_Red Hat Hybrid Cloud Console_](https://console.redhat.com/openshift/assisted-installer/clusters/):** 
+* Open the OpenShift Assisted Installer from the [_Red Hat Hybrid Cloud Console_](https://console.redhat.com/openshift/assisted-installer/clusters/):
    - You will be prompted for your `Red Hat ID` and `password` to login.
 
- - **b. Select "_Create New Cluster_".**
+* **Select "_Create New Cluster_".**
 
 <p align="center"><img width="800" alt="image" src="step_1b.png"></p>
 
- - **c. From the "_Cluster details_" step, enter the cluster name, the base domain; then select "_OpenShift 4.13.0_" and "_Install single node OpenShift (SNO)_", and click "_Next_".**
+*# **From the "_Cluster details_" step, enter the cluster name, the base domain; then select "_OpenShift 4.13.0_" and "_Install single node OpenShift (SNO)_", and click "_Next_".**
 
 <p align="center"><img width="800" alt="image" src="step_1c.png"></p>
 
