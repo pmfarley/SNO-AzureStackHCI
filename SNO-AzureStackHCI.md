@@ -68,43 +68,31 @@ The following diagram shows the HPE GreenLake for Microsoft Azure Stack HCI envi
 
 <p align="center"><img width="600" alt="image" src="HPEGreenLakeforAzureStackHCI.png"></p>
 <br></br>
+---
 
 ## **STEP 1. GENERATE DISCOVERY ISO FROM THE ASSISTED INSTALLER:**
 
-#. Perform the following steps to install Single Node OpenShift (SNO) onto HPE GreenLake for Azure Stack HCI:
+1. Perform the following steps to install Single Node OpenShift (SNO) onto HPE GreenLake for Azure Stack HCI:
  
-* Open the OpenShift Assisted Installer from the [_Red Hat Hybrid Cloud Console_](https://console.redhat.com/openshift/assisted-installer/clusters/):
-   - You will be prompted for your `Red Hat ID` and `password` to login.
+   1. **Open the OpenShift Assisted Installer from the [_Red Hat Hybrid Cloud Console_](https://console.redhat.com/openshift/assisted-installer/clusters/):**
+      - You will be prompted for your `Red Hat ID` and `password` to login.
 
-* **Select "_Create New Cluster_".**
+   1. **Select "_Create New Cluster_".** <p align="center"><img width="800" alt="image" src="step_1b.png"></p>
 
-<p align="center"><img width="800" alt="image" src="step_1b.png"></p>
+   1. **From the "_Cluster details_" step, enter the cluster name, the base domain; then select "_OpenShift 4.13.0_" and "_Install single node OpenShift (SNO)_", and click "_Next_".** <p align="center"><img width="800" alt="image" src="step_1c.png"></p>
+ 
+   1. **On the "_Operators_" step, select "_Install Logical Volume Manager Storage_" and click "_Next_".** <p align="center"><img width="800" alt="image" src="step_1d.png"></p>
 
-*# **From the "_Cluster details_" step, enter the cluster name, the base domain; then select "_OpenShift 4.13.0_" and "_Install single node OpenShift (SNO)_", and click "_Next_".**
+    1. **On the "_Host discovery_" step, select "_Add host_".** <p align="center"><img width="800" alt="image" src="step_1e.png"></p>
 
-<p align="center"><img width="800" alt="image" src="step_1c.png"></p>
+    1. **Select "_Minimal Image File_" and "_Generate Discovery ISO_".** <p align="center"><img width="500" alt="image" src="step_1f.png"></p>
 
- - **d. On the "_Operators_" step, select "_Install Logical Volume Manager Storage_" and click "_Next_".**
+    1. **Click on the "_Download Discovery ISO_" button.** Save this ISO file for use in a later step, when creating the Virtual Machine for SNO. <p align="center"><img width="500" alt="image" src="step_1g.png"></p>
 
-<p align="center"><img width="800" alt="image" src="step_1d.png"></p>
-
- - **e. On the "_Host discovery_" step, select "_Add host_".**
-
-<p align="center"><img width="800" alt="image" src="step_1e.png"></p>
-
- - **f. Select "_Minimal Image File_" and "_Generate Discovery ISO_".**
-
-<p align="center"><img width="500" alt="image" src="step_1f.png"></p>
-
- - **g. Click on the "_Download Discovery ISO_" button.**
-
-Save this ISO file for use in a later step, when creating the Virtual Machine for SNO.
-
-<p align="center"><img width="500" alt="image" src="step_1g.png"></p>
-
- - **h. Click "_Close_" to return to the previous screen.**
+    1. **Click "_Close_" to return to the previous screen.**
 
 <br></br>
+
 ## **STEP 2. FROM WINDOWS ADMIN CENTER, CREATE A VIRTUAL MACHINE FOR SINGLE NODE OPENSHIFT**
 
 **Windows Admin Center** is the web-based management interface to manage Azure Stack HCI. You can install it onto a management PC, a Windows Server, or you may use it from the Azure Portal. For more information on installing and using Windows Admin Center in your environment, see the following:
