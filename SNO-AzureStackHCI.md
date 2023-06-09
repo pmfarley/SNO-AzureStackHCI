@@ -68,6 +68,7 @@ The following diagram shows the HPE GreenLake for Microsoft Azure Stack HCI envi
 
 <p align="center"><img width="600" alt="image" src="HPEGreenLakeforAzureStackHCI.png"></p>
 <br></br>
+
 ---
 
 ## **STEP 1. GENERATE DISCOVERY ISO FROM THE ASSISTED INSTALLER:**
