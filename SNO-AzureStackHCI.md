@@ -62,7 +62,7 @@ HPE GreenLake for Microsoft Azure Stack HCI provides a pay-per-use model, using 
 
 For additional details, see the [HPE GreenLake for Microsoft Azure Stack HCI solution brief](https://www.hpe.com/psnow/doc/a50003801enw.pdf?jumpid=in_pdfviewer-psnow).
 
-   **NOTE:** At the time of this blog, Red Hat OpenShift Container Platform running on _HPE GreenLake for Microsoft Azure Stack HCI_ does not currently utilize a pay-as-you-go based subscription.  It would utilize a traditional subscription for Red Hat OpenShift.
+   **NOTE:** At the time of this blog, Red Hat OpenShift Container Platform running on _HPE GreenLake for Microsoft Azure Stack HCI_ does not currently utilize a pay-as-you-go based subscription.  It would utilize a traditional subscription for Red Hat OpenShift.  Contact your HPE and/or Red Hat account sales team for assistance.
 
 The following diagram shows the HPE GreenLake for Microsoft Azure Stack HCI environment used for this installation of Red Hat OpenShift:
 
