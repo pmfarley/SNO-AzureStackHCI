@@ -1,7 +1,7 @@
 # Red Hat OpenShift on HPE GreenLake for Azure Stack HCI 
 Within this blog, I will provide the process for installing Red Hat OpenShift onto HPE GreenLake for Azure Stack HCI, using the OpenShift Assisted Installer.
 The process that I used, installed Single Node OpenShift (SNO) into a single virtual machine running on Azure Stack HCI, which provides a suitable platform for running edge and hybrid cloud workloads.  
-You can also use the Assisted Installer for installation variations of OpenShift other than SNO that work well at the edge, such as a three-node compact cluster, and it can also install a standard installation of OpenShift that uses 3 control-plane nodes, and multuple worker nodes.  
+You can also use the Assisted Installer for installation variations of OpenShift other than SNO that work well at the edge, such as a three-node compact cluster, and it can also install a standard installation of OpenShift that uses three control-plane nodes, and at least two worker nodes.  
 
 ## **SINGLE NODE OPENSHIFT REQUIREMENTS:**
 Single Node OpenShift has the following [minimum resource requirements](https://docs.openshift.com/container-platform/4.12/installing/installing_sno/install-sno-preparing-to-install-sno.html#install-sno-requirements-for-installing-on-a-single-node_install-sno-preparing):
